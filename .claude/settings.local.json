@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"C:\\\\Users\\\\Usuario\\\\Downloads\\\\Post Instagram Antes e Depois Reforma Decoração Branco Verde Minimalista\\\\24.png\" \"C:\\\\Users\\\\Usuario\\\\Downloads\\\\vivid-leads-boost-f5611567-main \\(1\\)\\\\vivid-leads-boost-f5611567-main\\\\src\\\\assets\\\\before-renovation.png\")",
+      "Bash(cp \"C:\\\\Users\\\\Usuario\\\\Downloads\\\\Post Instagram Antes e Depois Reforma Decoração Branco Verde Minimalista\\\\25.png\" \"C:\\\\Users\\\\Usuario\\\\Downloads\\\\vivid-leads-boost-f5611567-main \\(1\\)\\\\vivid-leads-boost-f5611567-main\\\\src\\\\assets\\\\after-renovation.png\")"
+    ]
+  }
+}
