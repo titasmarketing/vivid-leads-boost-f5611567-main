@@ -3,7 +3,7 @@ import { useState, type FormEvent } from "react";
 import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import { useTranslation } from "@/i18n";
 
-const WHATSAPP_URL = "https://wa.me/31687545046?text=Hello%2C%20I%27m%20interested%20in%20your%20services";
+const WHATSAPP_URL = "https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9";
 const WEBHOOK_URL = "https://hook.eu1.make.com/oafy4ddxvh1kjshlv2h1ok5rzw9widm9";
 const ease = [0.23, 1, 0.32, 1] as const;
 
@@ -30,7 +30,7 @@ const ContactForm = () => {
     const waText = encodeURIComponent(
       `Hello! My name is ${name}. Email: ${email}. Phone: ${phone}. I'm interested in: ${service}. ${message}`
     );
-    window.open(`https://wa.me/31687545046?text=${waText}`, "_blank");
+    window.open(`https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/56a2411b-16a7-4389-9c1e-985497266eaa?text=${waText}`, "_blank");
     setSubmitted(true);
   };
 

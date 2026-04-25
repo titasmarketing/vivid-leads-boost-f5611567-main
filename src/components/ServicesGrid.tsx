@@ -89,7 +89,7 @@ const ServicesGrid = () => {
 
         <div className="mt-12 flex justify-center">
           <motion.a
-            href="https://wa.me/31687545046?text=Hello%2C%20I%27m%20interested%20in%20your%20services"
+            href="https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}

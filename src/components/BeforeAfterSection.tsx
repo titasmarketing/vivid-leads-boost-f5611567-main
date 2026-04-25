@@ -11,7 +11,7 @@ import beforeImg from "@/assets/before-renovation.png";
 import afterImg from "@/assets/after-renovation.png";
 
 const WHATSAPP_URL =
-  "https://wa.me/31687545046?text=Hello%2C%20I%27m%20interested%20in%20your%20services";
+  "https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9";
 const ease = [0.23, 1, 0.32, 1] as const;
 
 // ── Interactive before/after slider ──────────────────────────────────────────
