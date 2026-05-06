@@ -1,6 +1,6 @@
 export const en = {
   hero: {
-    subtitle: "Amsterdam's Detail-Obsessed Painters",
+    subtitle: "Painting with an Eye for Detail in Amsterdam",
     title1: "YOUR SPACE.",
     title2: "NEW AGAIN.",
     description: "From historic canal houses to modern offices. Experience 10 years of flawless painting and renovation in Amsterdam.",
@@ -87,34 +87,15 @@ export const en = {
     subtitle: "Get In Touch",
     title1: "Ready to transform",
     title2: "your space?",
-    desc: "Tell us about your project and we'll get back to you within 24 hours with a personalized plan. No obligations.",
-    info: {
-      phone: "Phone",
-      email: "Email",
-      location: "Location",
-      locValue: "Amsterdam, Netherlands",
-      wa: "WhatsApp",
-      waDesc: "Quick reply guaranteed",
-    },
-    form: {
-      successTitle: "Message Sent!",
-      successDesc: "We'll be in touch within 24 hours.",
-      nameLabel: "Your Name",
-      namePlace: "John van der Berg",
-      emailLabel: "Email Address",
-      emailPlace: "john@example.com",
-      phoneLabel: "Phone Number",
-      phonePlace: "+31 6 1234 5678",
-      serviceLabel: "Service Needed",
-      serviceEmpty: "Select a service",
-      serviceOther: "Other",
-      msgLabel: "Tell Us About Your Project",
-      msgPlace: "Describe your project, space, and any specific requirements...",
-      btn: "Start Your Transformation"
-    }
+    desc: "Get in touch today and receive a free, no-obligation quote. We respond quickly!",
+    btnWhatsApp: "WhatsApp — Direct Contact",
+    btnInstagram: "Follow on Instagram",
+    btnEmail: "Send an Email",
   },
   footer: {
-    desc: "Renovation company based in Amsterdam.",
-    rights: "© 2026 SP Schilders. All Rights Reserved."
+    tagline: "Renovatie & Onderhoud",
+    location: "Amsterdam, Netherlands",
+    rights: "© 2026 SP Schilders. All rights reserved.",
+    kvk: "KVK: 75648393"
   }
 };

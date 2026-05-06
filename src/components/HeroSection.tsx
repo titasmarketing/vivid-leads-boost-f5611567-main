@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, ArrowDown } from "lucide-react";
+import { MessageCircle, ArrowDown, ShieldCheck, FolderCheck, Droplets } from "lucide-react";
 import heroImg from "@/assets/hero-interior.jpg";
 import logo from "@/assets/sp-schilders-logo.png";
 import { useTranslation } from "@/i18n";
@@ -12,6 +12,12 @@ const ease = [0.23, 1, 0.32, 1] as const;
 const HeroSection = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+
+  const trustTags = [
+    { icon: ShieldCheck, label: "4 Jaar Garantie" },
+    { icon: FolderCheck, label: "200+ Projecten" },
+    { icon: Droplets, label: "Sikkens Premium Verf" },
+  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -84,7 +90,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease, delay: 0.6 }}
-          className="font-body text-foreground/80 md:text-foreground/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-10 drop-shadow-sm font-medium md:font-normal"
+          className="font-body text-white text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-10 drop-shadow-sm font-medium"
         >
           {t.hero.description}
         </motion.p>
@@ -110,6 +116,26 @@ const HeroSection = () => {
           >
             {t.hero.btnServices}
           </a>
+        </motion.div>
+
+        {/* Trust Tags */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease, delay: 1.0 }}
+          className="flex flex-wrap items-center justify-center gap-3 md:gap-5 mt-8"
+        >
+          {trustTags.map((tag, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-4 py-2"
+            >
+              <tag.icon className="w-4 h-4 text-primary shrink-0" />
+              <span className="font-display font-semibold text-xs md:text-sm text-white/90 tracking-tight">
+                {tag.label}
+              </span>
+            </div>
+          ))}
         </motion.div>
       </div>
 

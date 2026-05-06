@@ -1,6 +1,6 @@
 export const nl = {
   hero: {
-    subtitle: "Schilders met Oog voor Detail in Amsterdam",
+    subtitle: "Schilderwerk met Oog voor Detail in Amsterdam",
     title1: "JOUW RUIMTE.",
     title2: "WEER ALS NIEUW.",
     description: "Van historische grachtenpanden tot moderne kantoren. Ervaar 10 jaar foutloos schilderwerk en renovatie in Amsterdam.",
@@ -87,34 +87,15 @@ export const nl = {
     subtitle: "Neem Contact Op",
     title1: "Klaar om te transformeren?",
     title2: "uw ruimte?",
-    desc: "Vertel ons over uw project en we nemen binnen 24 uur contact met u op met een persoonlijk plan. Geheel vrijblijvend.",
-    info: {
-      phone: "Telefoon",
-      email: "E-mail",
-      location: "Locatie",
-      locValue: "Amsterdam, Nederland",
-      wa: "WhatsApp",
-      waDesc: "Snel antwoord gegarandeerd",
-    },
-    form: {
-      successTitle: "Bericht Verzonden!",
-      successDesc: "We nemen binnen 24 uur contact met u op.",
-      nameLabel: "Uw Naam",
-      namePlace: "Jan van den Berg",
-      emailLabel: "E-mailadres",
-      emailPlace: "jan@voorbeeld.nl",
-      phoneLabel: "Telefoonnummer",
-      phonePlace: "+31 6 1234 5678",
-      serviceLabel: "Gewenste Dienst",
-      serviceEmpty: "Kies een dienst",
-      serviceOther: "Anders",
-      msgLabel: "Vertel ons over uw project",
-      msgPlace: "Beschrijf uw project, ruimte en eventuele specifieke wensen...",
-      btn: "Start Uw Transformatie"
-    }
+    desc: "Neem vandaag nog contact met ons op en ontvang een vrijblijvende offerte. Wij reageren snel!",
+    btnWhatsApp: "WhatsApp — Direct Contact",
+    btnInstagram: "Volg op Instagram",
+    btnEmail: "Stuur een E-mail",
   },
   footer: {
-    desc: "Renovatiebedrijf gevestigd in Amsterdam.",
-    rights: "© 2026 SP Schilders. Alle Rechten Voorbehouden."
+    tagline: "Renovatie & Onderhoud",
+    location: "Amsterdam, Nederland",
+    rights: "© 2026 SP Schilders. Alle rechten voorbehouden.",
+    kvk: "KVK: 75648393"
   }
 };
