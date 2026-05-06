@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { useTranslation } from "@/i18n";
-import waaromImg from "@/assets/Faça_uma_imagem_colocando_o_202605052249.jpeg";
+import waaromImg from "@/assets/sp-schilders-hero-brand.jpeg";
 
 const WHATSAPP_URL = "https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9";
 const ease = [0.23, 1, 0.32, 1] as const;
