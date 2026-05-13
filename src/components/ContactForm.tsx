@@ -3,7 +3,7 @@ import { MessageCircle, Instagram, Mail } from "lucide-react";
 import { useTranslation } from "@/i18n";
 
 const WHATSAPP_URL = "https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9";
-const INSTAGRAM_URL = "https://www.instagram.com/sp_schilders/";
+const INSTAGRAM_URL = "https://www.instagram.com/spschilders/";
 const EMAIL_ADDRESS = "spschilders@outlook.com";
 const ease = [0.23, 1, 0.32, 1] as const;
 
