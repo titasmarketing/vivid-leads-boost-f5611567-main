@@ -35,7 +35,7 @@ const ServicesGrid = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-background">
+    <section id="services" className="section-padding bg-brand-surface/20 border-t border-white/[0.03]">
       <div className="container">
         <motion.p
           initial={{ opacity: 0, y: 20 }}

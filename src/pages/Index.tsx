@@ -28,8 +28,8 @@ const Index = ({ lang }: { lang?: "en" | "nl" }) => {
       <HeroSection />
       <TrustBar />
       <ProblemSolution />
-      <ServicesGrid />
       <BeforeAfterSection />
+      <ServicesGrid />
       <FounderStory />
       <Testimonials />
       <ContactForm />

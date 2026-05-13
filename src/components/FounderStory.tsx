@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import craftImg from "@/assets/founder-craft.jpg";
+import bgImg from "@/assets/Amsterdam_canal_district_sunset_…_202605122332.jpeg";
+import logoImg from "@/assets/LOGOS CLIENTES.png";
 import { useTranslation } from "@/i18n";
 
 const ease = [0.23, 1, 0.32, 1] as const;
@@ -7,25 +8,22 @@ const ease = [0.23, 1, 0.32, 1] as const;
 const FounderStory = () => {
   const { t } = useTranslation();
   return (
-    <section className="section-padding bg-secondary">
-      <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, ease }}
-            className="relative rounded-2xl overflow-hidden aspect-[4/5] lg:aspect-[3/4]"
-          >
-            <img
-              src={craftImg}
-              alt="Meticulous craftsmanship close-up"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-          </motion.div>
+    <section className="relative section-padding overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={bgImg}
+          alt="Amsterdam canal sunset background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/85" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 to-transparent" />
+      </div>
 
+      <div className="container relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
+          {/* Left: Text Content */}
           <div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -54,7 +52,7 @@ const FounderStory = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease, delay: 0.2 }}
-              className="font-body text-foreground/60 text-base md:text-lg leading-relaxed mb-6"
+              className="font-body text-foreground/80 text-base md:text-lg leading-relaxed mb-6"
             >
               {t.founder.desc1}
             </motion.p>
@@ -64,7 +62,7 @@ const FounderStory = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease, delay: 0.3 }}
-              className="font-body text-foreground/60 text-base md:text-lg leading-relaxed mb-6"
+              className="font-body text-foreground/80 text-base md:text-lg leading-relaxed mb-6"
             >
               {t.founder.desc2}
             </motion.p>
@@ -82,6 +80,30 @@ const FounderStory = () => {
               </span>
             </motion.div>
           </div>
+
+          {/* Right: Floating Logo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease }}
+            className="flex justify-center lg:justify-end"
+          >
+            <motion.img
+              src={logoImg}
+              alt="SP Schilders Logo"
+              animate={{
+                y: [0, -15, 0],
+              }}
+              transition={{
+                duration: 4,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+              className="w-[80%] md:w-[60%] lg:w-[70%] h-auto drop-shadow-[0_0_20px_rgba(234,179,8,0.2)]"
+            />
+          </motion.div>
         </div>
       </div>
     </section>

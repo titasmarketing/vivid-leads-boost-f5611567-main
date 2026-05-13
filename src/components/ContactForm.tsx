@@ -11,8 +11,11 @@ const ContactCTA = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="contact" className="section-padding bg-background">
-      <div className="container max-w-3xl">
+    <section id="contact" className="section-padding relative overflow-hidden bg-background">
+      {/* Subtle radial glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(234,179,8,0.06),transparent_60%)] pointer-events-none" />
+      
+      <div className="container max-w-3xl relative z-10">
         {/* Header */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -54,15 +57,16 @@ const ContactCTA = () => {
           transition={{ duration: 0.8, ease, delay: 0.3 }}
           className="space-y-4"
         >
-          {/* Row 1: WhatsApp — full width */}
+          {/* Row 1: WhatsApp — main brand CTA */}
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#1ebe5a] text-white px-8 py-5 rounded-xl font-display font-bold text-lg tracking-tight transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#25D366]/30"
+            className="group relative overflow-hidden flex items-center justify-center gap-3 w-full bg-primary text-primary-foreground px-8 py-5 rounded-xl font-display font-bold text-lg tracking-tight transition-all duration-300 hover:scale-[1.02] shadow-[0_0_40px_-10px_rgba(234,179,8,0.4)] hover:shadow-[0_0_60px_-15px_rgba(234,179,8,0.6)]"
           >
-            <MessageCircle className="w-6 h-6 transition-transform group-hover:scale-110" />
-            {t.contact.btnWhatsApp}
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+            <MessageCircle className="w-6 h-6 transition-transform group-hover:scale-110 relative z-10" />
+            <span className="relative z-10">{t.contact.btnWhatsApp}</span>
           </a>
 
           {/* Row 2: Instagram + Email */}
@@ -71,15 +75,15 @@ const ContactCTA = () => {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-3 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:opacity-90 text-white px-6 py-5 rounded-xl font-display font-bold text-base tracking-tight transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#833AB4]/30"
+              className="group flex items-center justify-center gap-3 bg-white/5 border border-white/10 hover:border-[#E1306C]/50 hover:bg-white/10 text-white px-6 py-5 rounded-xl font-display font-bold text-base tracking-tight transition-all duration-300 backdrop-blur-sm"
             >
-              <Instagram className="w-5 h-5 transition-transform group-hover:scale-110" />
+              <Instagram className="w-5 h-5 text-[#E1306C] transition-transform group-hover:scale-110" />
               {t.contact.btnInstagram}
             </a>
 
             <a
               href={`mailto:${EMAIL_ADDRESS}`}
-              className="group flex items-center justify-center gap-3 bg-card hover:bg-card/80 border border-border text-foreground px-6 py-5 rounded-xl font-display font-bold text-base tracking-tight transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-primary/30"
+              className="group flex items-center justify-center gap-3 bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-white/10 text-white px-6 py-5 rounded-xl font-display font-bold text-base tracking-tight transition-all duration-300 backdrop-blur-sm"
             >
               <Mail className="w-5 h-5 text-primary transition-transform group-hover:scale-110" />
               {t.contact.btnEmail}
