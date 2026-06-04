@@ -97,5 +97,76 @@ export const en = {
     location: "Amsterdam, Netherlands",
     rights: "© 2026 SP Schilders. All rights reserved.",
     kvk: "KVK: 75648393"
+  },
+  binnenschilderPage: {
+    subtitle: "INTERIOR PAINTING",
+    title1: "Breathe new life into your spaces",
+    title2: "with precision painting.",
+    description: "Breathe new life into your indoor spaces with our precision interior painting. Whether it is a single room or an entire building, we create an inviting atmosphere with clean lines and vibrant colors.",
+    btnHome: "Back to Home",
+    btnWhatsApp: "Get a Quote"
+  },
+  binnenschilderAds: {
+    trust: {
+      exp: "Flawless Finish",
+      based: "Clean and Tidy Delivery",
+      quality: "Brazilian Detail, Dutch Quality"
+    },
+    problem: {
+      subtitle: "WHY CHOOSE OUR INTERIOR PAINTING?",
+      title1: "Perfectly sleek walls and",
+      title2: "ceilings, worry-free.",
+      desc1: "Worried about your furniture or floors getting covered in paint? We protect everything meticulously before we start. Our interior painting means clean lines at the window frames, smooth doors, and streak-free ceilings.",
+      desc2: "Whether you want to transform a single room or an entire property, our team works efficiently, cleanly, and with the highest quality paint. Instantly create an inviting, warm atmosphere in your home.",
+      btn: "Request a Personalized Quote"
+    },
+    beforeafter: {
+      before: "Before",
+      after: "After",
+      drag: "← Drag to compare →",
+      subtitle: "THE TRANSFORMATION",
+      title1: "First a dark room.",
+      title2: "Now a bright oasis.",
+      desc1: "Walls perfectly painted, window frames sharply finished, and a perfectly opaque layer on the ceiling. This is the result of our precision work.",
+      desc2: "We don't just work with the best paint; we also pay extreme attention to preparatory work, such as sanding and filling, for a result that remains beautiful for years.",
+      desc3: "Ready to breathe new life into your own interior?",
+      btn: "Get Advice via WhatsApp"
+    },
+    founder: {
+      subtitle: "OUR APPROACH",
+      title1: "Your home is our",
+      title2: "biggest priority.",
+      desc1: "For indoor jobs, trust is essential. Founded in 2019 by Charles Prado, we have given countless homes in Amsterdam a new look, with respect for your personal space and belongings.",
+      desc2: "Our team works extremely neatly and ensures we leave your home clean every day. You get the result of a high-end transformation, with the peace of mind that comes with real professionals.",
+      name: "Charles Prado — Founder"
+    },
+    testimonials: {
+      subtitle: "WHAT CLIENTS SAY",
+      title: "Reviews about our Interior Painting",
+      desc: "Read how we transform interiors without stress for the residents.",
+      reviews: {
+        1: {
+          quote: "I was hesitant to have everything painted while we lived there. But SP Schilders masked everything perfectly. The walls are sleek, the doors are beautiful, and we didn't have a single drop of paint on the floor. Fantastic!",
+          author: "S. de Boer"
+        },
+        2: {
+          quote: "They sprayed my entire living room and hallway (spray painting) and painted all the woodwork. It feels like a new house. Very punctual, polite, and true craftsmanship.",
+          author: "J. Visser"
+        },
+        3: {
+          quote: "Beautiful, smooth walls and no streaks to be seen on the ceilings. They think along with you about the right colors and deliver an impeccable end result.",
+          author: "E. Jansen"
+        }
+      }
+    },
+    contact: {
+      subtitle: "READY FOR A NEW LOOK?",
+      title1: "Let's transform your",
+      title2: "interior.",
+      desc: "Contact us directly for a free quote. Send us a few photos via WhatsApp and we will quickly give you an indication!",
+      btnWhatsApp: "Quote via WhatsApp",
+      btnInstagram: "Inspiration on Instagram",
+      btnEmail: "Email Your Question",
+    }
   }
 };

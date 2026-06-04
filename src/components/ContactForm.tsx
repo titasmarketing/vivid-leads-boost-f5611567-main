@@ -7,8 +7,13 @@ const INSTAGRAM_URL = "https://www.instagram.com/spschilders/";
 const EMAIL_ADDRESS = "spschilders@outlook.com";
 const ease = [0.23, 1, 0.32, 1] as const;
 
-const ContactCTA = () => {
+interface ContactCTAProps {
+  content?: any;
+}
+
+const ContactCTA = ({ content }: ContactCTAProps = {}) => {
   const { t } = useTranslation();
+  const data = content || t.contact;
 
   return (
     <section id="contact" className="section-padding relative overflow-hidden bg-background">
@@ -24,7 +29,7 @@ const ContactCTA = () => {
           transition={{ duration: 0.8, ease }}
           className="text-primary font-display font-semibold text-sm tracking-widest uppercase mb-6 text-center"
         >
-          {t.contact.subtitle}
+          {data.subtitle}
         </motion.p>
 
         <motion.h2
@@ -34,9 +39,9 @@ const ContactCTA = () => {
           transition={{ duration: 0.8, ease, delay: 0.1 }}
           className="font-display font-bold text-3xl md:text-4xl lg:text-5xl tracking-tighter leading-[0.95] mb-6 text-center"
         >
-          {t.contact.title1}
+          {data.title1}
           <br />
-          <span className="text-gradient-gold">{t.contact.title2}</span>
+          <span className="text-gradient-gold">{data.title2}</span>
         </motion.h2>
 
         <motion.p
@@ -46,7 +51,7 @@ const ContactCTA = () => {
           transition={{ duration: 0.8, ease, delay: 0.2 }}
           className="font-body text-foreground/60 text-base md:text-lg leading-relaxed mb-12 text-center max-w-xl mx-auto"
         >
-          {t.contact.desc}
+          {data.desc}
         </motion.p>
 
         {/* CTA Buttons */}
@@ -66,7 +71,7 @@ const ContactCTA = () => {
           >
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
             <MessageCircle className="w-6 h-6 transition-transform group-hover:scale-110 relative z-10" />
-            <span className="relative z-10">{t.contact.btnWhatsApp}</span>
+            <span className="relative z-10">{data.btnWhatsApp}</span>
           </a>
 
           {/* Row 2: Instagram + Email */}
@@ -78,7 +83,7 @@ const ContactCTA = () => {
               className="group flex items-center justify-center gap-3 bg-white/5 border border-white/10 hover:border-[#E1306C]/50 hover:bg-white/10 text-white px-6 py-5 rounded-xl font-display font-bold text-base tracking-tight transition-all duration-300 backdrop-blur-sm"
             >
               <Instagram className="w-5 h-5 text-[#E1306C] transition-transform group-hover:scale-110" />
-              {t.contact.btnInstagram}
+              {data.btnInstagram}
             </a>
 
             <a
@@ -86,7 +91,7 @@ const ContactCTA = () => {
               className="group flex items-center justify-center gap-3 bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-white/10 text-white px-6 py-5 rounded-xl font-display font-bold text-base tracking-tight transition-all duration-300 backdrop-blur-sm"
             >
               <Mail className="w-5 h-5 text-primary transition-transform group-hover:scale-110" />
-              {t.contact.btnEmail}
+              {data.btnEmail}
             </a>
           </div>
         </motion.div>

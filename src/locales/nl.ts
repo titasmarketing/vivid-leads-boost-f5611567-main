@@ -97,5 +97,76 @@ export const nl = {
     location: "Amsterdam, Nederland",
     rights: "© 2026 SP Schilders. Alle rechten voorbehouden.",
     kvk: "KVK: 75648393"
+  },
+  binnenschilderPage: {
+    subtitle: "BINNENSCHILDERWERK",
+    title1: "Blaas uw binnenruimtes nieuw leven in",
+    title2: "met precisie schilderwerk.",
+    description: "Blaas uw binnenruimtes nieuw leven in met ons precisie binnenschilderwerk. Of het nu een enkele kamer of een heel pand is, wij creëren een uitnodigende sfeer met strakke lijnen en levendige kleuren.",
+    btnHome: "Terug naar Home",
+    btnWhatsApp: "Offerte Aanvragen"
+  },
+  binnenschilderAds: {
+    trust: {
+      exp: "Vlekkeloze Afwerking",
+      based: "Schone en Nette Oplevering",
+      quality: "Braziliaans Detail, Nederlandse Kwaliteit"
+    },
+    problem: {
+      subtitle: "WAAROM KIEZEN VOOR ONS BINNENSCHILDERWERK?",
+      title1: "Perfect strakke wanden en",
+      title2: "plafonds, zonder zorgen.",
+      desc1: "Bang dat uw meubels of vloeren onder de verf komen te zitten? Wij beschermen alles minutieus voordat we beginnen. Ons binnenschilderwerk betekent strakke lijnen bij de kozijnen, egale deuren en plafonds zonder strepen.",
+      desc2: "Of u nu één kamer of een volledig pand wilt transformeren, ons team werkt efficiënt, schoon en met de hoogste kwaliteit verf. Creëer direct een uitnodigende, warme sfeer in uw huis.",
+      btn: "Vraag een Persoonlijke Offerte Aan"
+    },
+    beforeafter: {
+      before: "Voor",
+      after: "Na",
+      drag: "← Sleep om te vergelijken →",
+      subtitle: "DE TRANSFORMATIE",
+      title1: "Eerst een donkere kamer.",
+      title2: "Nu een lichte oase.",
+      desc1: "Muren strak in de lak, kozijnen scherp afgewerkt en een perfect dekkende laag op het plafond. Dit is het resultaat van ons precisiewerk.",
+      desc2: "We werken niet alleen met de beste verf, we besteden ook extreem veel aandacht aan het voorbereidende werk, zoals schuren en plamuren, voor een resultaat dat jarenlang prachtig blijft.",
+      desc3: "Klaar om uw eigen interieur nieuw leven in te blazen?",
+      btn: "Krijg Advies via WhatsApp"
+    },
+    founder: {
+      subtitle: "ONZE AANPAK",
+      title1: "Uw huis is onze",
+      title2: "grootste prioriteit.",
+      desc1: "Bij binnenklussen is vertrouwen essentieel. Opgericht in 2019 door Charles Prado, hebben wij talloze huizen in Amsterdam van een nieuwe look voorzien, met respect voor uw persoonlijke ruimte en bezittingen.",
+      desc2: "Ons team werkt uiterst netjes en zorgt dat we uw huis elke dag schoon achterlaten. U krijgt het resultaat van een high-end transformatie, met de gemoedsrust die hoort bij echte professionals.",
+      name: "Charles Prado — Oprichter"
+    },
+    testimonials: {
+      subtitle: "WAT KLANTEN ZEGGEN",
+      title: "Recensies over ons Binnenschilderwerk",
+      desc: "Lees hoe wij interieurs transformeren zonder stress voor de bewoners.",
+      reviews: {
+        1: {
+          quote: "Ik was huiverig om alles te laten schilderen terwijl we er woonden. Maar SP Schilders heeft alles zo perfect afgeplakt. De muren zijn strak, de deuren prachtig en we hadden geen enkel spatje verf op de vloer. Fantastisch!",
+          author: "S. de Boer"
+        },
+        2: {
+          quote: "Ze hebben mijn hele woonkamer en hal gespoten (spuitwerk) en al het houtwerk geschilderd. Het voelt als een nieuw huis. Zeer stipt, beleefd en echt vakmanschap.",
+          author: "J. Visser"
+        },
+        3: {
+          quote: "Prachtige, egale muren en geen strepen op de plafonds te bekennen. Ze denken met je mee over de juiste kleuren en leveren een onberispelijk eindresultaat.",
+          author: "E. Jansen"
+        }
+      }
+    },
+    contact: {
+      subtitle: "KLAAR VOOR EEN NIEUWE LOOK?",
+      title1: "Laten we uw interieur",
+      title2: "transformeren.",
+      desc: "Neem direct contact op voor een vrijblijvende offerte. Stuur ons een paar foto's via WhatsApp en we geven u snel een indicatie!",
+      btnWhatsApp: "Offerte via WhatsApp",
+      btnInstagram: "Inspiratie op Instagram",
+      btnEmail: "Mail uw Vraag",
+    }
   }
 };

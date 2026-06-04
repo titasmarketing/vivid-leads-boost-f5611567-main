@@ -4,13 +4,18 @@ import { useTranslation } from "@/i18n";
 
 const ease = [0.23, 1, 0.32, 1] as const;
 
-const TrustBar = () => {
+interface TrustBarProps {
+  content?: any;
+}
+
+const TrustBar = ({ content }: TrustBarProps = {}) => {
   const { t } = useTranslation();
+  const data = content || t.trust;
 
   const items = [
-    { icon: Clock, label: t.trust.exp },
-    { icon: MapPin, label: t.trust.based },
-    { icon: Sparkles, label: t.trust.quality },
+    { icon: Clock, label: data.exp },
+    { icon: MapPin, label: data.based },
+    { icon: Sparkles, label: data.quality },
   ];
 
   return (

@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Binnenschilder from "./pages/Binnenschilder.tsx";
 import { I18nProvider } from "./i18n";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,12 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/nl" element={<Index />} />
             <Route path="/en" element={<Index lang="en" />} />
+            
+            {/* Custom Routes */}
+            <Route path="/binnenschilder" element={<Binnenschilder />} />
+            <Route path="/nl/binnenschilder" element={<Binnenschilder />} />
+            <Route path="/en/binnenschilder" element={<Binnenschilder lang="en" />} />
+
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

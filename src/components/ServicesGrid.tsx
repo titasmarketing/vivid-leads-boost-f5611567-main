@@ -5,11 +5,14 @@ import microcementImg from "@/assets/service-microcement-v2.jpg";
 import cleaningImg from "@/assets/service-cleaning-v2.png";
 import maintenanceImg from "@/assets/service-maintenance-v2.png";
 import { useTranslation } from "@/i18n";
+import { Link, useLocation } from "react-router-dom";
 
 const ease = [0.23, 1, 0.32, 1] as const;
 
 const ServicesGrid = () => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+  const location = useLocation();
+  const isBinnenschilderPage = location.pathname.includes("binnenschilder");
 
   const services = [
     {
@@ -26,6 +29,7 @@ const ServicesGrid = () => {
       title: t.services.items.interior.title,
       description: t.services.items.interior.desc,
       image: cleaningImg,
+      link: isBinnenschilderPage ? undefined : (locale === 'en' ? "/en/binnenschilder" : "/binnenschilder")
     },
     {
       title: t.services.items.spray.title,
@@ -58,7 +62,34 @@ const ServicesGrid = () => {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {services.map((service, i) => (
+          {services.map((service, i) => {
+            const CardContent = (
+              <>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-6 md:p-8">
+                  <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3 text-foreground">
+                    {service.title}
+                  </h3>
+                  <p className="font-body text-foreground/60 text-sm md:text-base leading-relaxed">
+                    {service.description}
+                  </p>
+                  {service.link && (
+                    <span className="inline-block mt-4 text-primary font-display font-semibold tracking-tight group-hover:underline">
+                      Bekijk details &rarr;
+                    </span>
+                  )}
+                </div>
+              </>
+            );
+
+            return (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
@@ -67,24 +98,15 @@ const ServicesGrid = () => {
               transition={{ duration: 0.8, ease, delay: i * 0.1 }}
               className="group relative bg-card rounded-2xl overflow-hidden border border-transparent transition-all duration-300 hover:border-foreground/10 hover:scale-[1.02]"
             >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-              <div className="p-6 md:p-8">
-                <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3 text-foreground">
-                  {service.title}
-                </h3>
-                <p className="font-body text-foreground/60 text-sm md:text-base leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+              {service.link ? (
+                <Link to={service.link} className="block w-full h-full">
+                  {CardContent}
+                </Link>
+              ) : (
+                CardContent
+              )}
             </motion.div>
-          ))}
+          )})}
         </div>
 
         <div className="mt-12 flex justify-center">

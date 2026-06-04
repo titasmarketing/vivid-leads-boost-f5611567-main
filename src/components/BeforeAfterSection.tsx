@@ -15,12 +15,22 @@ const WHATSAPP_URL =
 const ease = [0.23, 1, 0.32, 1] as const;
 
 // ── Interactive before/after slider ──────────────────────────────────────────
-const Slider = () => {
-  const { t } = useTranslation();
+const Slider = ({ 
+  data, 
+  beforeImgOverride, 
+  afterImgOverride 
+}: { 
+  data: any; 
+  beforeImgOverride?: string; 
+  afterImgOverride?: string; 
+}) => {
   const [pos, setPos] = useState(50);
   const [touched, setTouched] = useState(false);
   const dragging = useRef(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const displayBefore = beforeImgOverride || beforeImg;
+  const displayAfter = afterImgOverride || afterImg;
 
   const move = useCallback((clientX: number) => {
     const el = containerRef.current;
@@ -49,7 +59,7 @@ const Slider = () => {
     >
       {/* ── After image — base layer ── */}
       <img
-        src={afterImg}
+        src={displayAfter}
         alt="After renovation"
         className="absolute inset-0 w-full h-full object-cover"
         draggable={false}
@@ -61,7 +71,7 @@ const Slider = () => {
         style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
       >
         <img
-          src={beforeImg}
+          src={displayBefore}
           alt="Before renovation"
           className="absolute inset-0 w-full h-full object-cover"
           draggable={false}
@@ -81,10 +91,10 @@ const Slider = () => {
 
       {/* ── Corner labels ── */}
       <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm text-foreground/80 text-xs font-display font-bold tracking-[0.15em] uppercase px-3 py-1.5 rounded-lg pointer-events-none border border-white/10">
-        {t.beforeafter.before}
+        {data.before}
       </div>
       <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground text-xs font-display font-bold tracking-[0.15em] uppercase px-3 py-1.5 rounded-lg pointer-events-none">
-        {t.beforeafter.after}
+        {data.after}
       </div>
 
       {/* ── Drag hint — fades after first interaction ── */}
@@ -94,15 +104,22 @@ const Slider = () => {
         transition={{ duration: 0.4 }}
         className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 text-foreground/50 text-xs font-body tracking-wide pointer-events-none whitespace-nowrap"
       >
-        <span>{t.beforeafter.drag}</span>
+        <span>{data.drag}</span>
       </motion.div>
     </div>
   );
 };
 
 // ── Full section ──────────────────────────────────────────────────────────────
-const BeforeAfterSection = () => {
+interface BeforeAfterSectionProps {
+  content?: any;
+  beforeImage?: string;
+  afterImage?: string;
+}
+
+const BeforeAfterSection = ({ content, beforeImage, afterImage }: BeforeAfterSectionProps = {}) => {
   const { t } = useTranslation();
+  const data = content || t.beforeafter;
   return (
     <section className="section-padding bg-secondary">
       <div className="container">
@@ -115,7 +132,7 @@ const BeforeAfterSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, ease }}
           >
-            <Slider />
+            <Slider data={data} beforeImgOverride={beforeImage} afterImgOverride={afterImage} />
           </motion.div>
 
           {/* Right — copy */}
@@ -127,7 +144,7 @@ const BeforeAfterSection = () => {
               transition={{ duration: 0.8, ease }}
               className="text-primary font-display font-semibold text-sm tracking-widest uppercase mb-6"
             >
-              {t.beforeafter.subtitle}
+              {data.subtitle}
             </motion.p>
 
             <motion.h2
@@ -137,9 +154,9 @@ const BeforeAfterSection = () => {
               transition={{ duration: 0.8, ease, delay: 0.1 }}
               className="font-display font-bold text-3xl md:text-4xl lg:text-5xl tracking-tighter leading-[0.95] mb-8"
             >
-              {t.beforeafter.title1}
+              {data.title1}
               <br />
-              <span className="text-gradient-gold">{t.beforeafter.title2}</span>
+              <span className="text-gradient-gold">{data.title2}</span>
             </motion.h2>
 
             <motion.p
@@ -149,7 +166,7 @@ const BeforeAfterSection = () => {
               transition={{ duration: 0.8, ease, delay: 0.2 }}
               className="font-body text-foreground/60 text-base md:text-lg leading-relaxed mb-6"
             >
-              {t.beforeafter.desc1}
+              {data.desc1}
             </motion.p>
 
             <motion.p
@@ -159,7 +176,7 @@ const BeforeAfterSection = () => {
               transition={{ duration: 0.8, ease, delay: 0.3 }}
               className="font-body text-foreground/60 text-base md:text-lg leading-relaxed mb-8"
             >
-              {t.beforeafter.desc2}
+              {data.desc2}
             </motion.p>
 
             <motion.p
@@ -169,7 +186,7 @@ const BeforeAfterSection = () => {
               transition={{ duration: 0.8, ease, delay: 0.35 }}
               className="font-body text-foreground/80 text-base md:text-lg leading-relaxed mb-10 font-semibold"
             >
-              {t.beforeafter.desc3}
+              {data.desc3}
             </motion.p>
 
             <motion.a
@@ -185,7 +202,7 @@ const BeforeAfterSection = () => {
               className="inline-flex items-center justify-center text-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-display font-bold text-base tracking-tight hover:shadow-[var(--shadow-gold)] transition-shadow duration-300"
             >
               <MessageCircle className="w-5 h-5 shrink-0" />
-              <span>{t.beforeafter.btn}</span>
+              <span>{data.btn}</span>
             </motion.a>
           </div>
 
