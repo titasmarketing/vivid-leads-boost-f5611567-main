@@ -101,11 +101,13 @@ const BinnenschilderHero = ({ content, lang = "nl" }: BinnenschilderHeroProps) =
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
                 <Button 
+                  asChild
                   size="lg" 
-                  className="gap-4 text-primary-foreground font-bold" 
-                  onClick={() => window.open(WHATSAPP_URL, "_blank")}
+                  className="gap-4 text-primary-foreground font-bold"
                 >
-                  {content.btnWhatsApp} <PhoneCall className="w-4 h-4" />
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                    {content.btnWhatsApp} <PhoneCall className="w-4 h-4" />
+                  </a>
                 </Button>
                 {/* Segundo botão pode ser para navegar para depoimentos ou ver serviços */}
                 <Button 
