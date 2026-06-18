@@ -21,6 +21,7 @@ const ContactForm = ({ content }: ContactFormProps = {}) => {
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
   const [shouldBounce, setShouldBounce] = useState(false);
+  const [phone, setPhone] = useState("");
 
   useEffect(() => {
     const handleBounce = () => {
@@ -43,6 +44,73 @@ const ContactForm = ({ content }: ContactFormProps = {}) => {
         : "spschilders@outlook.com has been copied to your clipboard.",
     });
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let input = e.target.value;
+
+    // Se o input estiver totalmente vazio
+    if (!input) {
+      setPhone("");
+      return;
+    }
+
+    // Se o usuário está apagando o prefixo "+31" e restou apenas parte dele
+    if (input === "+" || input === "+3" || input === "+31" || input === "+31 ") {
+      setPhone("");
+      return;
+    }
+
+    // Caso contrário, garanta que comece com +31
+    if (!input.startsWith("+31")) {
+      const digits = input.replace(/\D/g, "");
+      if (!digits) {
+        setPhone("");
+        return;
+      }
+      if (digits.startsWith("31")) {
+        input = "+31 " + digits.slice(2);
+      } else {
+        input = "+31 " + digits;
+      }
+    }
+
+    const countryCode = "+31";
+    let localPart = input.slice(countryCode.length);
+    localPart = localPart.replace(/\D/g, ""); // Apenas números
+
+    if (localPart.length > 9) {
+      localPart = localPart.slice(0, 9);
+    }
+
+    let formatted = countryCode;
+
+    if (localPart.length > 0) {
+      const firstDigit = localPart[0];
+      if (firstDigit === "6") {
+        // Celular: +31 6 1234 5678
+        formatted += " " + firstDigit;
+        if (localPart.length > 1) {
+          formatted += " " + localPart.slice(1, 5);
+        }
+        if (localPart.length > 5) {
+          formatted += " " + localPart.slice(5, 9);
+        }
+      } else {
+        // Outros/Fixo: +31 DD 123 4567
+        if (localPart.length <= 2) {
+          formatted += " " + localPart;
+        } else if (localPart.length <= 5) {
+          formatted += " " + localPart.slice(0, 2) + " " + localPart.slice(2);
+        } else {
+          formatted += " " + localPart.slice(0, 2) + " " + localPart.slice(2, 5) + " " + localPart.slice(5, 9);
+        }
+      }
+    } else {
+      formatted += " ";
+    }
+
+    setPhone(formatted);
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -226,7 +294,14 @@ const ContactForm = ({ content }: ContactFormProps = {}) => {
                     id="phone"
                     name="phone"
                     required
+                    value={phone}
+                    onChange={handlePhoneChange}
                     placeholder={formText.phonePlace}
+                    pattern="^\+31\s?([0-9]\s?){9}$"
+                    title={locale === "nl" 
+                      ? "Vul a.b.b. een geldig Nederlands telefoonnummer in (bijv. +31 6 1234 5678)" 
+                      : "Please enter a valid Dutch phone number (e.g. +31 6 1234 5678)"
+                    }
                     className="w-full bg-secondary border border-border rounded-xl px-4 py-3.5 font-body text-sm text-foreground placeholder:text-foreground/30 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                   />
                 </div>
@@ -258,6 +333,7 @@ const ContactForm = ({ content }: ContactFormProps = {}) => {
                     id="message"
                     name="message"
                     rows={4}
+                    required
                     placeholder={formText.msgPlace}
                     className="w-full bg-secondary border border-border rounded-xl px-4 py-3.5 font-body text-sm text-foreground placeholder:text-foreground/30 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
                   />
