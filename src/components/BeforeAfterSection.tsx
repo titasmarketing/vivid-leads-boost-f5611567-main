@@ -190,9 +190,8 @@ const BeforeAfterSection = ({ content, beforeImage, afterImage }: BeforeAfterSec
             </motion.p>
 
             <motion.a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
+              onClick={() => window.dispatchEvent(new CustomEvent("trigger-contact-bounce"))}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

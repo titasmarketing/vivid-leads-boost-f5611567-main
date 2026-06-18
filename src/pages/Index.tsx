@@ -11,6 +11,9 @@ import ContactForm from "@/components/ContactForm";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Footer from "@/components/Footer";
 
+import beforeBinnenImg from "@/assets/before - binnen.png";
+import afterBinnenImg from "@/assets/after - binnen.png";
+
 const Index = ({ lang }: { lang?: "en" | "nl" }) => {
   const { setLocale } = useTranslation();
 
@@ -28,7 +31,10 @@ const Index = ({ lang }: { lang?: "en" | "nl" }) => {
       <HeroSection />
       <TrustBar />
       <ProblemSolution />
-      <BeforeAfterSection />
+      <BeforeAfterSection 
+        beforeImage={beforeBinnenImg}
+        afterImage={afterBinnenImg}
+      />
       <ServicesGrid />
       <FounderStory />
       <Testimonials />

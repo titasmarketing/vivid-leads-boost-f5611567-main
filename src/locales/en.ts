@@ -4,7 +4,7 @@ export const en = {
     title1: "YOUR SPACE.",
     title2: "NEW AGAIN.",
     description: "From historic canal houses to modern offices. Experience 10 years of flawless painting and renovation in Amsterdam.",
-    btnWhatsApp: "Get a Quote via WhatsApp",
+    btnWhatsApp: "Get a Quote",
     btnServices: "View Our Services",
     btnHeader: "Get a Quote"
   },
@@ -54,7 +54,7 @@ export const en = {
     desc1: "This project shows what a full renovation really means: new window frames, floor finishing, and paintwork, all executed with precision, from start to finish. The result speaks for itself.",
     desc2: "At SP Schilders, our renovation and painting services are built to do more than refresh a surface. They transform the way a space feels and holds its value, every detail handled, from a single room to an entire property.",
     desc3: "Ready to see what yours could become?",
-    btn: "Get a Quote via WhatsApp"
+    btn: "Get a Quote"
   },
   founder: {
     subtitle: "Our Story",
@@ -91,6 +91,30 @@ export const en = {
     btnWhatsApp: "WhatsApp — Direct Contact",
     btnInstagram: "Follow on Instagram",
     btnEmail: "Send an Email",
+    info: {
+      phone: "Phone",
+      email: "Email",
+      location: "Location",
+      locValue: "Amsterdam, Netherlands",
+      wa: "WhatsApp",
+      waDesc: "Quick reply guaranteed",
+    },
+    form: {
+      successTitle: "Message Sent!",
+      successDesc: "We'll be in touch within 24 hours.",
+      nameLabel: "Your Name",
+      namePlace: "John van der Berg",
+      emailLabel: "Email Address",
+      emailPlace: "john@example.com",
+      phoneLabel: "Phone Number",
+      phonePlace: "+31 6 1234 5678",
+      serviceLabel: "Service Needed",
+      serviceEmpty: "Select a service",
+      serviceOther: "Other",
+      msgLabel: "Tell Us About Your Project",
+      msgPlace: "Describe your project, space, and any specific requirements...",
+      btn: "Start Your Transformation"
+    }
   },
   footer: {
     tagline: "Renovatie & Onderhoud",
@@ -130,7 +154,7 @@ export const en = {
       desc1: "Walls perfectly painted, window frames sharply finished, and a perfectly opaque layer on the ceiling. This is the result of our precision work.",
       desc2: "We don't just work with the best paint; we also pay extreme attention to preparatory work, such as sanding and filling, for a result that remains beautiful for years.",
       desc3: "Ready to breathe new life into your own interior?",
-      btn: "Get Advice via WhatsApp"
+      btn: "Get Advice"
     },
     founder: {
       subtitle: "OUR APPROACH",

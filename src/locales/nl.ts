@@ -4,7 +4,7 @@ export const nl = {
     title1: "JOUW RUIMTE.",
     title2: "WEER ALS NIEUW.",
     description: "Van historische grachtenpanden tot moderne kantoren. Ervaar 10 jaar foutloos schilderwerk en renovatie in Amsterdam.",
-    btnWhatsApp: "Offerte aanvragen via WhatsApp",
+    btnWhatsApp: "Offerte aanvragen",
     btnServices: "Bekijk Onze Diensten",
     btnHeader: "Offerte Aanvragen"
   },
@@ -54,7 +54,7 @@ export const nl = {
     desc1: "Dit project laat zien wat een volledige renovatie echt betekent: nieuwe kozijnen, vloerafwerking en schilderwerk, allemaal met precisie uitgevoerd, van begin tot eind. Het resultaat spreekt voor zich.",
     desc2: "Bij SP Schilders zijn onze renovatie- en schilderdiensten ontprevent om meer te doen dan alleen een oppervlak opfrissen. Ze transformeren de manier waarop een ruimte aanvoelt en waarde behoudt, waarbij elk detail wordt afgehandeld, van een enkele kamer tot een heel pand.",
     desc3: "Klaar om te zien wat de uwe kan worden?",
-    btn: "Vraag een Offerte aan via WhatsApp"
+    btn: "Vraag een Offerte aan"
   },
   founder: {
     subtitle: "Ons Verhaal",
@@ -91,6 +91,30 @@ export const nl = {
     btnWhatsApp: "WhatsApp — Direct Contact",
     btnInstagram: "Volg op Instagram",
     btnEmail: "Stuur een E-mail",
+    info: {
+      phone: "Telefoon",
+      email: "E-mail",
+      location: "Locatie",
+      locValue: "Amsterdam, Nederland",
+      wa: "WhatsApp",
+      waDesc: "Snel antwoord gegarandeerd",
+    },
+    form: {
+      successTitle: "Bericht Verzonden!",
+      successDesc: "We nemen binnen 24 uur contact met u op.",
+      nameLabel: "Uw Naam",
+      namePlace: "Jan van den Berg",
+      emailLabel: "E-mailadres",
+      emailPlace: "jan@voorbeeld.nl",
+      phoneLabel: "Telefoonnummer",
+      phonePlace: "+31 6 1234 5678",
+      serviceLabel: "Gewenste Dienst",
+      serviceEmpty: "Kies een dienst",
+      serviceOther: "Anders",
+      msgLabel: "Vertel ons over uw project",
+      msgPlace: "Beschrijf uw project, ruimte en eventuele specifieke wensen...",
+      btn: "Start Uw Transformatie"
+    }
   },
   footer: {
     tagline: "Renovatie & Onderhoud",
@@ -130,7 +154,7 @@ export const nl = {
       desc1: "Muren strak in de lak, kozijnen scherp afgewerkt en een perfect dekkende laag op het plafond. Dit is het resultaat van ons precisiewerk.",
       desc2: "We werken niet alleen met de beste verf, we besteden ook extreem veel aandacht aan het voorbereidende werk, zoals schuren en plamuren, voor een resultaat dat jarenlang prachtig blijft.",
       desc3: "Klaar om uw eigen interieur nieuw leven in te blazen?",
-      btn: "Krijg Advies via WhatsApp"
+      btn: "Krijg Advies"
     },
     founder: {
       subtitle: "ONZE AANPAK",

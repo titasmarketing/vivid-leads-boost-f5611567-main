@@ -104,8 +104,9 @@ const BinnenschilderHero = ({ content, lang = "nl" }: BinnenschilderHeroProps) =
                   asChild
                   size="lg" 
                   className="gap-4 text-primary-foreground font-bold"
+                  onClick={() => window.dispatchEvent(new CustomEvent("trigger-contact-bounce"))}
                 >
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <a href="#contact">
                     {content.btnWhatsApp} <PhoneCall className="w-4 h-4" />
                   </a>
                 </Button>
@@ -117,6 +118,7 @@ const BinnenschilderHero = ({ content, lang = "nl" }: BinnenschilderHeroProps) =
                   onClick={() => {
                     const section = document.getElementById("contact");
                     section?.scrollIntoView({ behavior: "smooth" });
+                    window.dispatchEvent(new CustomEvent("trigger-contact-bounce"));
                   }}
                 >
                   {lang === "en" ? "Contact Us" : "Neem Contact Op"} <MoveRight className="w-4 h-4" />

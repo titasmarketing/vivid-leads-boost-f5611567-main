@@ -53,9 +53,8 @@ const HeroSection = () => {
           </div>
 
           <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            onClick={() => window.dispatchEvent(new CustomEvent("trigger-contact-bounce"))}
             className="hidden md:flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-display font-bold text-sm tracking-tight transition-transform duration-300 hover:scale-105"
           >
             <MessageCircle className="w-4 h-4" />
@@ -102,9 +101,8 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            onClick={() => window.dispatchEvent(new CustomEvent("trigger-contact-bounce"))}
             className="flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-display font-bold text-base tracking-tight transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-gold)]"
           >
             <MessageCircle className="w-5 h-5" />
