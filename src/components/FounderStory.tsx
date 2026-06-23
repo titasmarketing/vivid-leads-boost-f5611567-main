@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import bgImg from "@/assets/Amsterdam_canal_district_sunset_…_202605122332.jpeg";
-import logoImg from "@/assets/LOGOS CLIENTES.png";
+import timelapseVideo from "@/assets/timelapse.mp4";
 import { useTranslation } from "@/i18n";
 
 const ease = [0.23, 1, 0.32, 1] as const;
@@ -13,7 +13,7 @@ const FounderStory = ({ content }: FounderStoryProps = {}) => {
   const { t } = useTranslation();
   const data = content || t.founder;
   return (
-    <section className="relative section-padding overflow-hidden">
+    <section id="about" className="relative section-padding overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -86,28 +86,25 @@ const FounderStory = ({ content }: FounderStoryProps = {}) => {
             </motion.div>
           </div>
 
-          {/* Right: Floating Logo */}
+          {/* Right: Timelapse Video */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end w-full"
           >
-            <motion.img
-              src={logoImg}
-              alt="SP Schilders Logo"
-              animate={{
-                y: [0, -15, 0],
-              }}
-              transition={{
-                duration: 4,
-                ease: "easeInOut",
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-              className="w-[80%] md:w-[60%] lg:w-[70%] h-auto drop-shadow-[0_0_20px_rgba(234,179,8,0.2)]"
-            />
+            <div className="relative w-full max-w-[480px] aspect-video lg:aspect-square bg-secondary/30 rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+              <video
+                src={timelapseVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent pointer-events-none" />
+            </div>
           </motion.div>
         </div>
       </div>
