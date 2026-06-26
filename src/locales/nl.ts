@@ -1,9 +1,9 @@
 export const nl = {
   hero: {
     subtitle: "Schilderwerk met Oog voor Detail in Amsterdam",
-    title1: "JOUW RUIMTE.",
-    title2: "WEER ALS NIEUW.",
-    description: "Van historische grachtenpanden tot moderne kantoren. Ervaar 10 jaar foutloos schilderwerk en renovatie in Amsterdam.",
+    title1: "Hét Schildersbedrijf in Amsterdam",
+    title2: "voor Premium Schilderwerk",
+    description: "Zoekt u een professionele schilder in Amsterdam voor binnen of zoekt u een schilder buiten? Wij behoren tot de beste schildersbedrijven in Amsterdam. Vraag direct uw offerte aan via WhatsApp.",
     btnWhatsApp: "Offerte via WhatsApp",
     btnServices: "Bekijk Onze Diensten",
     btnHeader: "Offerte via WhatsApp"
@@ -191,38 +191,6 @@ export const nl = {
       btnWhatsApp: "Offerte via WhatsApp",
       btnInstagram: "Inspiratie op Instagram",
       btnEmail: "Mail uw Vraag",
-    },
-    heroVariations: {
-      "schilder amsterdam": {
-        subtitle: "Ervaren Schilder in Amsterdam",
-        title1: "SCHILDER AMSTERDAM.",
-        title2: "KWALITEIT DIE BLIJFT.",
-        description: "Op zoek naar een professionele schilder in Amsterdam? SP Schilders levert al meer dan 10 jaar foutloos schilderwerk met oog voor detail."
-      },
-      "schildersbedrijven amsterdam": {
-        subtitle: "Top Schildersbedrijven in Amsterdam",
-        title1: "SCHILDERSBEDRIJVEN.",
-        title2: "KIES VOOR DE BESTE.",
-        description: "Vergelijkt u schildersbedrijven in Amsterdam? SP Schilders garandeert strakke afwerkingen, betrouwbaarheid en topkwaliteit."
-      },
-      "schilderwerk amsterdam": {
-        subtitle: "Hoogwaardig Schilderwerk in Amsterdam",
-        title1: "SCHILDERWERK.",
-        title2: "PERFECT AFGEWERKT.",
-        description: "Van historische grachtenpanden tot moderne kantoren. Wij verzorgen al uw schilderwerk in Amsterdam met absolute precisie."
-      },
-      "schildersbedrijf amsterdam": {
-        subtitle: "Professioneel Schildersbedrijf in Amsterdam",
-        title1: "SCHILDERSBEDRIJF.",
-        title2: "VAKMANSCHAP & DETAIL.",
-        description: "Hét schildersbedrijf in Amsterdam voor exclusieve afwerking. Wij transformeren uw interieur en exterieur met garantie op kwaliteit."
-      },
-      "schilder buiten": {
-        subtitle: "Gespecialiseerde Schilder Buiten",
-        title1: "SCHILDER BUITEN.",
-        title2: "BESCHERM UW WONING.",
-        description: "Zoekt u een schilder voor buiten? Wij beschermen uw houtwerk, kozijnen en gevels tegen weer en wind met de beste buitenlakken."
-      }
     }
   }
 };

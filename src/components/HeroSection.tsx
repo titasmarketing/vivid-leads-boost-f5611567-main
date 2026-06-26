@@ -1,11 +1,10 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, ArrowDown, ShieldCheck, FolderCheck, Droplets } from "lucide-react";
 import heroImg from "@/assets/hero-interior.jpg";
 import logo from "@/assets/sp-schilders-logo.png";
 import fotoCharles from "@/assets/foto_charles.png";
 import { useTranslation } from "@/i18n";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const WHATSAPP_URL = "https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9";
 
@@ -14,52 +13,6 @@ const ease = [0.23, 1, 0.32, 1] as const;
 const HeroSection = () => {
   const { t, locale } = useTranslation();
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const [heroContent, setHeroContent] = useState({
-    subtitle: t.hero.subtitle,
-    title1: t.hero.title1,
-    title2: t.hero.title2,
-    description: t.hero.description,
-  });
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const keywordParam = params.get("utm_term") || params.get("keyword") || params.get("kw") || params.get("q");
-
-    if (keywordParam) {
-      const term = keywordParam.toLowerCase().trim().replace(/_/g, " ").replace(/-/g, " ");
-      const variations = (t as any).heroVariations;
-      
-      if (variations) {
-        let matchedKey = "";
-        const normalizedKeys = Object.keys(variations);
-
-        if (variations[term]) {
-          matchedKey = term;
-        } else {
-          matchedKey = normalizedKeys.find(key => term.includes(key) || key.includes(term)) || "";
-        }
-
-        if (matchedKey && variations[matchedKey]) {
-          setHeroContent({
-            subtitle: variations[matchedKey].subtitle,
-            title1: variations[matchedKey].title1,
-            title2: variations[matchedKey].title2,
-            description: variations[matchedKey].description,
-          });
-          return;
-        }
-      }
-    }
-
-    setHeroContent({
-      subtitle: t.hero.subtitle,
-      title1: t.hero.title1,
-      title2: t.hero.title2,
-      description: t.hero.description,
-    });
-  }, [t, locale, location.search]);
 
   const trustTags = [
     { icon: ShieldCheck, label: "4 Jaar Garantie" },
@@ -140,7 +93,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, ease, delay: 0.2 }}
             >
               <p className="text-primary font-display font-semibold text-sm md:text-base tracking-widest uppercase mb-4 text-center lg:text-left">
-                {heroContent.subtitle}
+                {t.hero.subtitle}
               </p>
             </motion.div>
 
@@ -150,9 +103,9 @@ const HeroSection = () => {
               transition={{ duration: 1, ease, delay: 0.4 }}
               className="font-display font-bold text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.95] text-foreground text-center lg:text-left"
             >
-              {heroContent.title1}
+              {t.hero.title1}
               <br />
-              <span className="text-gradient-gold">{heroContent.title2}</span>
+              <span className="text-gradient-gold">{t.hero.title2}</span>
             </motion.h1>
 
             <motion.p
@@ -161,7 +114,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, ease, delay: 0.6 }}
               className="font-body text-foreground/80 text-base md:text-lg max-w-xl leading-relaxed text-center lg:text-left mx-auto lg:mx-0"
             >
-              {heroContent.description}
+              {t.hero.description}
             </motion.p>
 
             <motion.div
