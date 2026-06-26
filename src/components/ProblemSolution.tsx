@@ -78,8 +78,9 @@ const ProblemSolution = ({ content, hideCarousel = false }: ProblemSolutionProps
           className="mb-16"
         >
           <motion.a
-            href="#contact"
-            onClick={() => window.dispatchEvent(new CustomEvent("trigger-contact-bounce"))}
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-display font-bold text-base tracking-tight shadow-lg shadow-primary/20"

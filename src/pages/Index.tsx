@@ -7,7 +7,7 @@ import ServicesGrid from "@/components/ServicesGrid";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import FounderStory from "@/components/FounderStory";
 import Testimonials from "@/components/Testimonials";
-import ContactForm from "@/components/ContactForm";
+import CTASection from "@/components/CTASection";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Footer from "@/components/Footer";
 
@@ -38,7 +38,8 @@ const Index = ({ lang }: { lang?: "en" | "nl" }) => {
       <ServicesGrid />
       <FounderStory />
       <Testimonials />
-      <ContactForm />
+      <CTASection />
+
       <Footer />
       <FloatingWhatsApp />
     </main>

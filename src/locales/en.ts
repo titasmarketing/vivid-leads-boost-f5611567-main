@@ -4,9 +4,9 @@ export const en = {
     title1: "YOUR SPACE.",
     title2: "NEW AGAIN.",
     description: "From historic canal houses to modern offices. Experience 10 years of flawless painting and renovation in Amsterdam.",
-    btnWhatsApp: "Get a Quote",
+    btnWhatsApp: "Quote via WhatsApp",
     btnServices: "View Our Services",
-    btnHeader: "Get a Quote"
+    btnHeader: "Quote via WhatsApp"
   },
   trust: {
     exp: "10+ Years Experience",
@@ -42,7 +42,7 @@ export const en = {
         desc: "Achieve ultra-smooth, factory-like finishes on various surfaces with our specialized spray painting services. Ideal for doors, cabinets, furniture, and intricate details, this advanced technique ensures an even coat and a superior aesthetic. Deliver a modern, refined, and impeccable look to your space with unparalleled efficiency and quality."
       }
     },
-    btn: "Request a Personalized Plan"
+    btn: "Request a Personalized Plan via WhatsApp"
   },
   beforeafter: {
     before: "Before",
@@ -191,6 +191,38 @@ export const en = {
       btnWhatsApp: "Quote via WhatsApp",
       btnInstagram: "Inspiration on Instagram",
       btnEmail: "Email Your Question",
+    },
+    heroVariations: {
+      "schilder amsterdam": {
+        subtitle: "Experienced Painter in Amsterdam",
+        title1: "PAINTER AMSTERDAM.",
+        title2: "QUALITY THAT LASTS.",
+        description: "Looking for a professional painter in Amsterdam? SP Schilders has been delivering flawless painting with an eye for detail for over 10 years."
+      },
+      "schildersbedrijven amsterdam": {
+        subtitle: "Top Painting Companies in Amsterdam",
+        title1: "PAINTING COMPANIES.",
+        title2: "CHOOSE THE BEST.",
+        description: "Are you comparing painting companies in Amsterdam? SP Schilders guarantees neat finishes, reliability, and top-tier quality."
+      },
+      "schilderwerk amsterdam": {
+        subtitle: "High-End Painting in Amsterdam",
+        title1: "PAINTING WORK.",
+        title2: "PERFECTLY FINISHED.",
+        description: "From historic canal houses to modern offices. We take care of all your painting work in Amsterdam with absolute precision."
+      },
+      "schildersbedrijf amsterdam": {
+        subtitle: "Professional Painting Company in Amsterdam",
+        title1: "PAINTING COMPANY.",
+        title2: "CRAFT & DETAIL.",
+        description: "The painting company in Amsterdam for exclusive finishes. We transform your interior and exterior with a quality guarantee."
+      },
+      "schilder buiten": {
+        subtitle: "Specialized Outdoor Painter",
+        title1: "OUTDOOR PAINTER.",
+        title2: "PROTECT YOUR HOME.",
+        description: "Looking for an outdoor painter? We protect your woodwork, window frames, and facades against weather conditions with premium paints."
+      }
     }
   }
 };

@@ -104,9 +104,8 @@ const BinnenschilderHero = ({ content, lang = "nl" }: BinnenschilderHeroProps) =
                   asChild
                   size="lg" 
                   className="gap-4 text-primary-foreground font-bold"
-                  onClick={() => window.dispatchEvent(new CustomEvent("trigger-contact-bounce"))}
                 >
-                  <a href="#contact">
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                     {content.btnWhatsApp} <PhoneCall className="w-4 h-4" />
                   </a>
                 </Button>
