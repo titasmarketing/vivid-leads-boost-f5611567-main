@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MessageCircle, ArrowDown, ShieldCheck, FolderCheck, Droplets } from "lucide-react";
 import heroImg from "@/assets/hero-interior.jpg";
 import logo from "@/assets/sp-schilders-logo.png";
-import fotoCharles from "@/assets/foto_charles.png";
+import timelapseVideo from "@/assets/timelapse.mp4";
 import { useTranslation } from "@/i18n";
 import { useNavigate } from "react-router-dom";
 
@@ -161,23 +161,23 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Right Column: 3D Image of Charles */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+          {/* Right Column: Timelapse Video */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1.2, ease, delay: 0.5 }}
-              className="relative w-full aspect-[4/5] max-w-[360px] md:max-w-[400px] h-[450px] md:h-[500px] lg:h-[550px]"
+              className="relative w-full aspect-[4/5] max-w-[360px] md:max-w-[400px] h-[450px] md:h-[500px] lg:h-[550px] bg-secondary/30 rounded-[32px] overflow-hidden border border-white/10 shadow-[var(--shadow-deep)]"
             >
-              {/* Moldura de fundo - customizada com as cores do design system atual */}
-              <div className="absolute bottom-0 right-0 w-[90%] h-[90%] bg-secondary/40 border border-white/10 rounded-[32px] shadow-[var(--shadow-deep)]" />
-              
-              {/* Imagem do Charles - extrapola a moldura para cima e para a esquerda, reposicionada no mobile para não cortar */}
-              <img
-                src={fotoCharles}
-                alt="Charles Prado - Oprichter"
-                className="absolute bottom-0 right-0 h-[105%] w-auto max-w-none object-contain z-10 translate-x-[15%] lg:-translate-x-[5%] translate-y-[2%] select-none pointer-events-none drop-shadow-[-12px_8px_24px_rgba(0,0,0,0.6)]"
+              <video
+                src={timelapseVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent pointer-events-none" />
             </motion.div>
           </div>
         </div>

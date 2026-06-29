@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import bgImg from "@/assets/Amsterdam_canal_district_sunset_…_202605122332.jpeg";
-import timelapseVideo from "@/assets/timelapse.mp4";
+import fotoCharles from "@/assets/foto_charles.png";
 import { useTranslation } from "@/i18n";
 
 const ease = [0.23, 1, 0.32, 1] as const;
@@ -86,7 +86,7 @@ const FounderStory = ({ content }: FounderStoryProps = {}) => {
             </motion.div>
           </div>
 
-          {/* Right: Timelapse Video */}
+          {/* Right: Charles Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -94,16 +94,16 @@ const FounderStory = ({ content }: FounderStoryProps = {}) => {
             transition={{ duration: 1, ease }}
             className="flex justify-center lg:justify-end w-full"
           >
-            <div className="relative w-full max-w-[480px] aspect-video lg:aspect-square bg-secondary/30 rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-              <video
-                src={timelapseVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
+            <div className="relative w-full aspect-[4/5] max-w-[360px] md:max-w-[400px] h-[450px] md:h-[500px] lg:h-[550px]">
+              {/* Moldura de fundo */}
+              <div className="absolute bottom-0 right-0 w-[90%] h-[90%] bg-secondary/40 border border-white/10 rounded-[32px] shadow-[var(--shadow-deep)]" />
+              
+              {/* Imagem do Charles */}
+              <img
+                src={fotoCharles}
+                alt="Charles Prado - Oprichter"
+                className="absolute bottom-0 right-0 h-[105%] w-auto max-w-none object-contain z-10 translate-x-[15%] lg:-translate-x-[5%] translate-y-[2%] select-none pointer-events-none drop-shadow-[-12px_8px_24px_rgba(0,0,0,0.6)]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent pointer-events-none" />
             </div>
           </motion.div>
         </div>
