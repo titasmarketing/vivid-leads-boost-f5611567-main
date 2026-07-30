@@ -95,3 +95,18 @@ html {
 .animate-wa-pulse {
   animation: wa-pulse 3s ease-in-out infinite;
 }
+
+/* Featurable Google Reviews Widget CSS Overrides */
+[id^="featurable-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+[id^="featurable-"] iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  border: none !important;
+  background: transparent !important;
+}

@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useTranslation } from "@/i18n";
 import HeroSection from "@/components/HeroSection";
-import TrustBar from "@/components/TrustBar";
 import ProblemSolution from "@/components/ProblemSolution";
 import ServicesGrid from "@/components/ServicesGrid";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import FounderStory from "@/components/FounderStory";
 import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
+import LocationSection from "@/components/LocationSection";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Footer from "@/components/Footer";
 
@@ -29,7 +29,7 @@ const Index = ({ lang }: { lang?: "en" | "nl" }) => {
   return (
     <main>
       <HeroSection />
-      <TrustBar />
+      <Testimonials />
       <ProblemSolution />
       <BeforeAfterSection 
         beforeImage={beforeBinnenImg}
@@ -37,8 +37,8 @@ const Index = ({ lang }: { lang?: "en" | "nl" }) => {
       />
       <ServicesGrid />
       <FounderStory />
-      <Testimonials />
       <CTASection />
+      <LocationSection />
 
       <Footer />
       <FloatingWhatsApp />

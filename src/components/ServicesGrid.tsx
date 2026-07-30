@@ -1,130 +1,224 @@
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ArrowRight } from "lucide-react";
+import { useTranslation } from "@/i18n";
+import { Link, useLocation } from "react-router-dom";
+
+import binnenImg from "@/assets/IMG_3625 (1).jpg";
+import buitenImg from "@/assets/a6e8b7d8-df94-4ccc-a852-9d87b71a83b6.jpg";
 import paintingImg from "@/assets/service-painting-v2.jpg";
 import microcementImg from "@/assets/service-microcement-v2.jpg";
 import cleaningImg from "@/assets/service-cleaning-v2.png";
 import maintenanceImg from "@/assets/service-maintenance-v2.png";
-import { useTranslation } from "@/i18n";
-import { Link, useLocation } from "react-router-dom";
 
 const ease = [0.23, 1, 0.32, 1] as const;
+const WHATSAPP_URL = "https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9";
 
 const ServicesGrid = () => {
-  const { t, locale } = useTranslation();
+  const { locale } = useTranslation();
   const location = useLocation();
+  const isEn = locale === "en";
   const isBinnenschilderPage = location.pathname.includes("binnenschilder");
 
-  const services = [
+  const bottomServices = [
     {
-      title: t.services.items.painting.title,
-      description: t.services.items.painting.desc,
+      title: isEn ? "Painting" : "Schilderwerk",
       image: paintingImg,
+      link: WHATSAPP_URL,
     },
     {
-      title: t.services.items.exterior.title,
-      description: t.services.items.exterior.desc,
+      title: isEn ? "Exterior Painting" : "Buitenschilderwerk",
       image: microcementImg,
+      link: WHATSAPP_URL,
     },
     {
-      title: t.services.items.interior.title,
-      description: t.services.items.interior.desc,
+      title: isEn ? "Interior Painting" : "Binnenschilderwerk",
       image: cleaningImg,
-      link: isBinnenschilderPage ? undefined : (locale === 'en' ? "/en/binnenschilder" : "/binnenschilder")
+      link: isBinnenschilderPage ? undefined : (isEn ? "/en/binnenschilder" : "/binnenschilder"),
     },
     {
-      title: t.services.items.spray.title,
-      description: t.services.items.spray.desc,
+      title: isEn ? "Spray Painting" : "Spuitwerk",
       image: maintenanceImg,
+      link: WHATSAPP_URL,
     },
   ];
 
   return (
-    <section id="services" className="section-padding bg-brand-surface/20 border-t border-white/[0.03]">
-      <div className="container">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease }}
-          className="text-primary font-display font-semibold text-sm tracking-widest uppercase mb-4 text-center"
-        >
-          {t.services.subtitle}
-        </motion.p>
-
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease, delay: 0.1 }}
-          className="font-display font-bold text-3xl md:text-5xl tracking-tighter leading-[0.95] mb-16 text-center"
-        >
-          {t.services.title}
-        </motion.h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {services.map((service, i) => {
-            const CardContent = (
-              <>
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-6 md:p-8">
-                  <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3 text-foreground">
-                    {service.title}
-                  </h3>
-                  <p className="font-body text-foreground/60 text-sm md:text-base leading-relaxed">
-                    {service.description}
-                  </p>
-                  {service.link && (
-                    <span className="inline-block mt-4 text-primary font-display font-semibold tracking-tight group-hover:underline">
-                      Bekijk details &rarr;
-                    </span>
-                  )}
-                </div>
-              </>
-            );
-
-            return (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease, delay: i * 0.1 }}
-              className="group relative bg-card rounded-2xl overflow-hidden border border-transparent transition-all duration-300 hover:border-foreground/10 hover:scale-[1.02]"
-            >
-              {service.link ? (
-                <Link to={service.link} className="block w-full h-full">
-                  {CardContent}
-                </Link>
-              ) : (
-                CardContent
-              )}
-            </motion.div>
-          )})}
-        </div>
-
-        <div className="mt-12 flex justify-center">
-          <motion.a
-            href="https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9"
-            target="_blank"
-            rel="noopener noreferrer"
+    <section id="services" className="py-16 md:py-24 bg-slate-50 text-zinc-900 border-y border-slate-200/80">
+      <div className="container max-w-6xl mx-auto px-4 md:px-8">
+        
+        {/* Section Header */}
+        <div className="text-center mb-14 md:mb-20">
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease, delay: 0.3 }}
-            whileHover={{ scale: 1.07 }}
-            whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-display font-bold text-base tracking-tight"
+            transition={{ duration: 0.8, ease }}
+            className="text-primary font-display font-semibold text-sm tracking-widest uppercase mb-3"
           >
-            <MessageCircle className="w-5 h-5" />
-            {t.services.btn}
-          </motion.a>
+            {isEn ? "OUR SERVICES" : "ONZE DIENSTEN"}
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease, delay: 0.1 }}
+            className="font-display font-bold text-3xl sm:text-4xl md:text-5xl tracking-tight text-slate-900"
+          >
+            {isEn ? "Our Professional Services" : "Onze Professionele Diensten"}
+          </motion.h2>
+        </div>
+
+        {/* ── Top Featured Services (Zigzag Layout) ── */}
+        <div className="space-y-16 md:space-y-24 mb-20 md:mb-28">
+
+          {/* 1. Binnenschilderwerk */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
+            {/* Text Left */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease }}
+              className="lg:col-span-6 space-y-4"
+            >
+              <h3 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-slate-900 tracking-tight">
+                {isEn ? "Interior Painting" : "Binnenschilderwerk"}
+              </h3>
+              <p className="font-body text-slate-600 text-base md:text-lg leading-relaxed">
+                {isEn
+                  ? "Breathe new life into your interior spaces with our precision interior painting. Whether it is a single room or an entire building, we create an inviting atmosphere with clean lines and vibrant colors."
+                  : "Blaas uw binnenruimtes nieuw leven in met ons precisie binnenschilderwerk. Of het nu een enkele kamer of een heel pand is, wij creëren een uitnodigende sfeer met strakke lijnen en levendige kleuren."}
+              </p>
+              <div className="pt-2">
+                <Link
+                  to={isEn ? "/en/binnenschilder" : "/binnenschilder"}
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-xl font-display font-bold text-sm tracking-tight transition-transform duration-300 hover:scale-105 shadow-md shadow-primary/20"
+                >
+                  <span>{isEn ? "View service" : "Bekijk dienst"}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Image Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease, delay: 0.1 }}
+              className="lg:col-span-6"
+            >
+              <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200/90 aspect-[4/3] group relative">
+                <img
+                  src={binnenImg}
+                  alt="Binnenschilderwerk SP Schilders"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* 2. Buitenschilderwerk */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
+            {/* Image Left */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease, delay: 0.1 }}
+              className="lg:col-span-6 order-2 lg:order-1"
+            >
+              <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200/90 aspect-[4/3] group relative">
+                <img
+                  src={buitenImg}
+                  alt="Buitenschilderwerk SP Schilders"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </motion.div>
+
+            {/* Text Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease }}
+              className="lg:col-span-6 space-y-4 order-1 lg:order-2"
+            >
+              <h3 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-slate-900 tracking-tight">
+                {isEn ? "Exterior Painting" : "Buitenschilderwerk"}
+              </h3>
+              <p className="font-body text-slate-600 text-base md:text-lg leading-relaxed">
+                {isEn
+                  ? "Protect and beautify the exterior of your property with our expert painting services. From facades to window frames, our durable finishes withstand the unpredictable weather in Amsterdam."
+                  : "Bescherm en verfraai de buitenkant van uw pand met onze deskundige schilderdiensten. Van gevels tot kozijnen, onze duurzame afwerkingen zijn bestand tegen het wisselvallige weer in Amsterdam."}
+              </p>
+              <div className="pt-2">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-xl font-display font-bold text-sm tracking-tight transition-transform duration-300 hover:scale-105 shadow-md shadow-primary/20"
+                >
+                  <span>{isEn ? "View service" : "Bekijk dienst"}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+
+        </div>
+
+        {/* ── Bottom 4 Grid Card Services (SP Black Styling) ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {bottomServices.map((service, i) => {
+            const CardButton = (
+              <span className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground py-3 px-4 rounded-xl font-display font-bold text-sm tracking-tight transition-all duration-300 group-hover:scale-105 shadow-md">
+                {isEn ? "Bekijk dienst" : "Bekijk dienst"}
+              </span>
+            );
+
+            return (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease, delay: i * 0.1 }}
+                className="group bg-zinc-900 rounded-3xl overflow-hidden shadow-xl border border-zinc-800 transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl flex flex-col justify-between"
+              >
+                {/* Top Image */}
+                <div className="aspect-[4/3] overflow-hidden relative">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Card Body */}
+                <div className="p-6 text-center flex flex-col items-center flex-1 justify-between gap-4">
+                  <h4 className="font-display font-bold text-2xl text-white tracking-tight">
+                    {service.title}
+                  </h4>
+
+                  {service.link?.startsWith("/") ? (
+                    <Link to={service.link} className="w-full">
+                      {CardButton}
+                    </Link>
+                  ) : service.link ? (
+                    <a href={service.link} target="_blank" rel="noopener noreferrer" className="w-full">
+                      {CardButton}
+                    </a>
+                  ) : (
+                    CardButton
+                  )}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

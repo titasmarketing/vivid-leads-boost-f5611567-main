@@ -3,10 +3,10 @@ export const en = {
     subtitle: "Painting with an Eye for Detail in Amsterdam",
     title1: "The Premier Painting Company in Amsterdam",
     title2: "for High-End Finishes",
-    description: "Looking for a professional painter in Amsterdam for interior work, or looking for an outdoor painter? We are among the top painting companies in Amsterdam. Request your quote directly via WhatsApp.",
-    btnWhatsApp: "Quote via WhatsApp",
+    description: "Looking for a professional painter in Amsterdam for interior work, or looking for an outdoor painter? We are among the top painting companies in Amsterdam.",
+    btnWhatsApp: "Free Painting Advice",
     btnServices: "View Our Services",
-    btnHeader: "Quote via WhatsApp"
+    btnHeader: "Free Quote"
   },
   trust: {
     exp: "10+ Years Experience",
@@ -19,7 +19,7 @@ export const en = {
     title2: "We perfect the detail.",
     desc1: "Tired of sloppy finishes, endless delays, and paint that peels after a few months? We understand the frustration. That's why every SP Schilders project is executed with meticulous precision — on time, on budget, and built to last.",
     desc2: "House, office, or shed — no matter the project, our expert team brings over a decade of experience to deliver top-quality results. We ensure a flawless finish and lasting elegance for every surface we touch.",
-    btn: "Get a Quote in Minutes"
+    btn: "Get In Touch"
   },
   services: {
     subtitle: "What We Do",
@@ -42,7 +42,7 @@ export const en = {
         desc: "Achieve ultra-smooth, factory-like finishes on various surfaces with our specialized spray painting services. Ideal for doors, cabinets, furniture, and intricate details, this advanced technique ensures an even coat and a superior aesthetic. Deliver a modern, refined, and impeccable look to your space with unparalleled efficiency and quality."
       }
     },
-    btn: "Request a Personalized Plan via WhatsApp"
+    btn: "Get In Touch"
   },
   beforeafter: {
     before: "Before",
@@ -54,7 +54,7 @@ export const en = {
     desc1: "This project shows what a full renovation really means: new window frames, floor finishing, and paintwork, all executed with precision, from start to finish. The result speaks for itself.",
     desc2: "At SP Schilders, our renovation and painting services are built to do more than refresh a surface. They transform the way a space feels and holds its value, every detail handled, from a single room to an entire property.",
     desc3: "Ready to see what yours could become?",
-    btn: "Get a Quote"
+    btn: "Get In Touch"
   },
   founder: {
     subtitle: "Our Story",
@@ -88,7 +88,7 @@ export const en = {
     title1: "Ready to transform",
     title2: "your space?",
     desc: "Get in touch today and receive a free, no-obligation quote. We respond quickly!",
-    btnWhatsApp: "WhatsApp — Direct Contact",
+    btnWhatsApp: "Get In Touch",
     btnInstagram: "Follow on Instagram",
     btnEmail: "Send an Email",
     info: {

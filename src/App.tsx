@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Binnenschilder from "./pages/Binnenschilder.tsx";
+import Contact from "./pages/Contact.tsx";
 import { I18nProvider } from "./i18n";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -28,6 +29,10 @@ const App = () => (
             <Route path="/binnenschilder" element={<Binnenschilder />} />
             <Route path="/nl/binnenschilder" element={<Binnenschilder />} />
             <Route path="/en/binnenschilder" element={<Binnenschilder lang="en" />} />
+
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/nl/contact" element={<Contact />} />
+            <Route path="/en/contact" element={<Contact lang="en" />} />
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

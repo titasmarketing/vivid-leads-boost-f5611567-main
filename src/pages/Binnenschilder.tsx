@@ -3,7 +3,6 @@ import { useTranslation } from "@/i18n";
 import { useNavigate } from "react-router-dom";
 
 import BinnenschilderHero from "@/components/BinnenschilderHero";
-import TrustBar from "@/components/TrustBar";
 import ProblemSolution from "@/components/ProblemSolution";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import FounderStory from "@/components/FounderStory";
@@ -44,15 +43,14 @@ const Binnenschilder = ({ lang }: { lang?: "en" | "nl" }) => {
         }} 
         lang={lang} 
       />
+      <Testimonials />
       <BeforeAfterSection 
         content={adsData.beforeafter} 
         beforeImage={beforeBinnenImg}
         afterImage={afterBinnenImg}
       />
-      <TrustBar content={adsData.trust} />
       <ProblemSolution content={adsData.problem} hideCarousel={true} />
       <FounderStory content={adsData.founder} />
-      <Testimonials content={adsData.testimonials} />
       <ContactForm content={adsData.contact} />
       
       {/* Onze diensten moved down here, exactly before the Footer */}

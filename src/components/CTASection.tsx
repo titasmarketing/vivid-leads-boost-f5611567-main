@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
 import { useTranslation } from "@/i18n";
+import { Link } from "react-router-dom";
 
-const WHATSAPP_URL = "https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9";
 const ease = [0.23, 1, 0.32, 1] as const;
 
 const CTASection = () => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const data = t.contact;
 
   return (
@@ -51,15 +50,12 @@ const CTASection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease, delay: 0.3 }}
         >
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to={locale === "en" ? "/en/contact" : "/contact"}
             className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-display font-bold text-base md:text-lg tracking-tight shadow-xl shadow-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-primary/40"
           >
-            <MessageCircle className="w-5 h-5" />
             {data.btnWhatsApp}
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

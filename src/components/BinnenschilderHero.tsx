@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall, ArrowLeft, ShieldCheck, FolderCheck, Droplets } from "lucide-react";
+import { MoveRight, PhoneCall, ArrowLeft, ShieldCheck, FolderCheck, Droplets, Maximize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +10,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import AutoScroll from "embla-carousel-auto-scroll";
+import ImageLightbox from "@/components/ImageLightbox";
 
 // Assets
 import heroBgImg from "@/assets/hero-interior.jpg";
@@ -145,7 +147,7 @@ const BinnenschilderHero = ({ content, lang = "nl" }: BinnenschilderHeroProps) =
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative w-full max-w-[460px] mx-auto overflow-hidden py-4"
+              className="relative w-full max-w-[580px] mx-auto overflow-hidden py-4"
             >
               <div className="relative w-full">
                 {/* Efeito de fade nas bordas */}
@@ -174,14 +176,21 @@ const BinnenschilderHero = ({ content, lang = "nl" }: BinnenschilderHeroProps) =
                         key={index}
                         className="pl-0 basis-full"
                       >
-                        <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg border border-white/10 group mx-auto max-w-[400px] lg:max-w-none">
+                        <div 
+                          onClick={() => setSelectedImageIndex(index)}
+                          className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-white/10 group mx-auto max-w-[520px] lg:max-w-none cursor-pointer"
+                        >
                           <img
                             src={src as string}
                             alt={`SP Schilders project photo ${index + 1}`}
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             loading="lazy"
                           />
-                          <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500 flex items-center justify-center">
+                            <div className="p-3 rounded-full bg-black/50 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 backdrop-blur-sm border border-white/20 shadow-lg">
+                              <Maximize2 className="w-6 h-6" />
+                            </div>
+                          </div>
                         </div>
                       </CarouselItem>
                     ))}
@@ -193,6 +202,14 @@ const BinnenschilderHero = ({ content, lang = "nl" }: BinnenschilderHeroProps) =
           </div>
         </div>
       </div>
+
+      {/* Lightbox for Fullscreen Image View */}
+      <ImageLightbox
+        images={carouselImages as string[]}
+        selectedIndex={selectedImageIndex}
+        onClose={() => setSelectedImageIndex(null)}
+        onSelectIndex={setSelectedImageIndex}
+      />
     </section>
   );
 };

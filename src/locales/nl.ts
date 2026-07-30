@@ -3,10 +3,10 @@ export const nl = {
     subtitle: "Schilderwerk met Oog voor Detail in Amsterdam",
     title1: "Hét Schildersbedrijf in Amsterdam",
     title2: "voor Premium Schilderwerk",
-    description: "Zoekt u een professionele schilder in Amsterdam voor binnen of zoekt u een schilder buiten? Wij behoren tot de beste schildersbedrijven in Amsterdam. Vraag direct uw offerte aan via WhatsApp.",
-    btnWhatsApp: "Offerte via WhatsApp",
+    description: "Zoekt u een professionele schilder in Amsterdam voor binnen of zoekt u een schilder buiten? Wij behoren tot de beste schildersbedrijven in Amsterdam.",
+    btnWhatsApp: "Gratis Schilderadvies",
     btnServices: "Bekijk Onze Diensten",
-    btnHeader: "Offerte via WhatsApp"
+    btnHeader: "Gratis Offerte"
   },
   trust: {
     exp: "10+ Jaar Ervaring",
@@ -19,7 +19,7 @@ export const nl = {
     title2: "Wij perfectioneren het detail.",
     desc1: "Moe van slordige afwerkingen, eindeloze vertragingen en verf die na een paar maanden afbladdert? We begrijpen de frustratie. Daarom wordt elk project van SP Schilders uitgevoerd met nauwgezette precisie — op tijd, binnen het budget en gebouwd om lang mee te gaan.",
     desc2: "Huis, kantoor of schuur — wat het project ook is, ons expertteam brengt meer dan tien jaar ervaring mee om topkwaliteit resultaten te leveren. Wij zorgen voor een vlekkeloze afwerking en blijvende elegantie voor elk oppervlak dat we aanraken.",
-    btn: "Ontvang Binnen Enkele Minuten een Offerte"
+    btn: "Neem Contact Op"
   },
   services: {
     subtitle: "Wat Wij Doen",
@@ -42,7 +42,7 @@ export const nl = {
         desc: "Bereik ultragladde, fabrieksachtige afwerkingen met onze gespecialiseerde spuitwerkdiensten. Ideaal voor deuren, kasten en complexe details. Deze geavanceerde techniek zorgt voor een superieure esthetiek."
       }
     },
-    btn: "Vraag een Persoonlijk Plan Aan via WhatsApp"
+    btn: "Neem Contact Op"
   },
   beforeafter: {
     before: "Voor",
@@ -54,7 +54,7 @@ export const nl = {
     desc1: "Dit project laat zien wat een volledige renovatie echt betekent: nieuwe kozijnen, vloerafwerking en schilderwerk, allemaal met precisie uitgevoerd, van begin tot eind. Het resultaat spreekt voor zich.",
     desc2: "Bij SP Schilders zijn onze renovatie- en schilderdiensten ontprevent om meer te doen dan alleen een oppervlak opfrissen. Ze transformeren de manier waarop een ruimte aanvoelt en waarde behoudt, waarbij elk detail wordt afgehandeld, van een enkele kamer tot een heel pand.",
     desc3: "Klaar om te zien wat de uwe kan worden?",
-    btn: "Vraag een Offerte aan"
+    btn: "Neem Contact Op"
   },
   founder: {
     subtitle: "Ons Verhaal",
@@ -74,7 +74,7 @@ export const nl = {
         author: "M. Verhoeven"
       },
       2: {
-        quote: "Ik had de buitenkant van mijn pand volledig geschilderd en gerestaureerd nodig voor de verkoop. SP Schilders beoordeelde alles en voerde het foutloos uit. Het pand werd boven de vraagprijs verkocht. Dat zegt genoeg.",
+        quote: "Ik had de buitenkant van mijn pand volledig geschilderd en gerestaureerd nodig voor de verkoop. SP Schilders beoordeelde alles en voerte het foutloos uit. Het pand werd boven de vraagprijs verkocht. Dat zegt genoeg.",
         author: "R. Bakker"
       },
       3: {
@@ -88,7 +88,7 @@ export const nl = {
     title1: "Klaar om te transformeren?",
     title2: "uw ruimte?",
     desc: "Neem vandaag nog contact met ons op en ontvang een vrijblijvende offerte. Wij reageren snel!",
-    btnWhatsApp: "WhatsApp — Direct Contact",
+    btnWhatsApp: "Neem Contact Op",
     btnInstagram: "Volg op Instagram",
     btnEmail: "Stuur een E-mail",
     info: {

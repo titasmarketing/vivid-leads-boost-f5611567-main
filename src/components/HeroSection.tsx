@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-interior.jpg";
 import logo from "@/assets/sp-schilders-logo.png";
 import timelapseVideo from "@/assets/timelapse.mp4";
 import { useTranslation } from "@/i18n";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const WHATSAPP_URL = "https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9";
 
@@ -48,7 +48,7 @@ const HeroSection = () => {
           <a href="#services" className="hover:text-primary transition-colors">{locale === "nl" ? "Diensten" : "Services"}</a>
           <a href="#portfolio" className="hover:text-primary transition-colors">{locale === "nl" ? "Portfolio" : "Portfolio"}</a>
           <a href="#about" className="hover:text-primary transition-colors">{locale === "nl" ? "Over Ons" : "About Us"}</a>
-          <a href="#contact" className="hover:text-primary transition-colors">{locale === "nl" ? "Contact" : "Contact"}</a>
+          <Link to={locale === "en" ? "/en/contact" : "/contact"} className="hover:text-primary transition-colors">{locale === "nl" ? "Contact" : "Contact"}</Link>
         </div>
         
         <div className="flex items-center gap-4">
@@ -69,16 +69,13 @@ const HeroSection = () => {
             </button>
           </div>
 
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to={locale === "en" ? "/en/contact" : "/contact"}
             className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-lg font-display font-bold text-sm tracking-tight transition-transform duration-300 hover:scale-105"
           >
-            <MessageCircle className="w-4 h-4" />
             <span className="hidden sm:inline">{t.hero.btnHeader}</span>
             <span className="sm:hidden">{locale === "nl" ? "Offerte" : "Quote"}</span>
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -123,15 +120,12 @@ const HeroSection = () => {
               transition={{ duration: 0.8, ease, delay: 0.8 }}
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 w-full max-w-md mx-auto lg:mx-0 lg:max-w-none"
             >
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={locale === "en" ? "/en/contact" : "/contact"}
                 className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 md:px-8 md:py-4 rounded-lg font-display font-bold text-sm md:text-base tracking-tight transition-all duration-300 hover:scale-[1.02] hover:shadow-[var(--shadow-gold)] w-full sm:w-auto"
               >
-                <MessageCircle className="w-5 h-5 shrink-0" />
-                {t.hero.btnWhatsApp}
-              </a>
+                <span>{t.hero.btnWhatsApp}</span>
+              </Link>
               <a
                 href="#services"
                 className="flex items-center justify-center gap-2 border border-foreground/20 text-foreground px-6 py-3.5 md:px-8 md:py-4 rounded-lg font-display font-semibold text-sm md:text-base tracking-tight transition-all duration-300 hover:border-foreground/60 hover:bg-white/5 backdrop-blur-sm w-full sm:w-auto"

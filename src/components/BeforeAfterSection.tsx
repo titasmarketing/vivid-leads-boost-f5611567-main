@@ -2,6 +2,7 @@ import { useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, ArrowLeftRight } from "lucide-react";
 import { useTranslation } from "@/i18n";
+import { Link } from "react-router-dom";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ⚠️  Replace these two imports with your actual before/after project photos.
@@ -118,7 +119,7 @@ interface BeforeAfterSectionProps {
 }
 
 const BeforeAfterSection = ({ content, beforeImage, afterImage }: BeforeAfterSectionProps = {}) => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const data = content || t.beforeafter;
   return (
     <section id="portfolio" className="section-padding bg-secondary">
@@ -189,21 +190,12 @@ const BeforeAfterSection = ({ content, beforeImage, afterImage }: BeforeAfterSec
               {data.desc3}
             </motion.p>
 
-            <motion.a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease, delay: 0.4 }}
-              whileHover={{ scale: 1.07 }}
-              whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center text-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-display font-bold text-base tracking-tight hover:shadow-[var(--shadow-gold)] transition-shadow duration-300"
+            <Link
+              to={locale === "en" ? "/en/contact" : "/contact"}
+              className="inline-flex items-center justify-center text-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-display font-bold text-base tracking-tight hover:shadow-[var(--shadow-gold)] transition-all duration-300 hover:scale-105"
             >
-              <MessageCircle className="w-5 h-5 shrink-0" />
               <span>{data.btn}</span>
-            </motion.a>
+            </Link>
           </div>
 
         </div>

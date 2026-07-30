@@ -15,13 +15,12 @@ const TrustBar = ({ content }: TrustBarProps = {}) => {
   const items = [
     { icon: Clock, label: data.exp },
     { icon: MapPin, label: data.based },
-    { icon: Sparkles, label: data.quality },
   ];
 
   return (
     <section className="border-y border-border bg-secondary">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
           {items.map((item, i) => (
             <motion.div
               key={item.label}
