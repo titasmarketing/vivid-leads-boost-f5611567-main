@@ -40,6 +40,7 @@ interface BinnenschilderHeroProps {
 
 const BinnenschilderHero = ({ content, lang = "nl" }: BinnenschilderHeroProps) => {
   const navigate = useNavigate();
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   const trustTags = [
     { icon: ShieldCheck, label: "4 Jaar Garantie" },
