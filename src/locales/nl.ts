@@ -1,7 +1,7 @@
 export const nl = {
   hero: {
     subtitle: "Schilderwerk met Oog voor Detail in Amsterdam",
-    title1: "Hét Schildersbedrijf in Amsterdam",
+    title1: "Het Schildersbedrijf in Amsterdam",
     title2: "voor Premium Schilderwerk",
     description: "Zoekt u een professionele schilder in Amsterdam voor binnen of zoekt u een schilder buiten? Wij behoren tot de beste schildersbedrijven in Amsterdam.",
     btnWhatsApp: "Gratis Schilderadvies",
