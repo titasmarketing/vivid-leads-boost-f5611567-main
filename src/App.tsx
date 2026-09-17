@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Binnenschilder from "./pages/Binnenschilder.tsx";
 import Contact from "./pages/Contact.tsx";
+import Offerte from "./pages/Offerte.tsx";
 import { I18nProvider } from "./i18n";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -33,6 +34,10 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/nl/contact" element={<Contact />} />
             <Route path="/en/contact" element={<Contact lang="en" />} />
+
+            <Route path="/offerte" element={<Offerte />} />
+            <Route path="/nl/offerte" element={<Offerte />} />
+            <Route path="/en/offerte" element={<Offerte lang="en" />} />
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

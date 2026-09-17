@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { MessageCircle, ArrowLeftRight } from "lucide-react";
 import { useTranslation } from "@/i18n";
 import { Link } from "react-router-dom";
+import { quotePath } from "@/lib/links";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ⚠️  Replace these two imports with your actual before/after project photos.
@@ -11,8 +12,6 @@ import { Link } from "react-router-dom";
 import beforeImg from "@/assets/before-renovation.png";
 import afterImg from "@/assets/after-renovation.png";
 
-const WHATSAPP_URL =
-  "https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9";
 const ease = [0.23, 1, 0.32, 1] as const;
 
 // ── Interactive before/after slider ──────────────────────────────────────────
@@ -122,7 +121,7 @@ const BeforeAfterSection = ({ content, beforeImage, afterImage }: BeforeAfterSec
   const { t, locale } = useTranslation();
   const data = content || t.beforeafter;
   return (
-    <section id="portfolio" className="section-padding bg-secondary">
+    <section id="projects" className="section-padding bg-secondary">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -191,7 +190,7 @@ const BeforeAfterSection = ({ content, beforeImage, afterImage }: BeforeAfterSec
             </motion.p>
 
             <Link
-              to={locale === "en" ? "/en/contact" : "/contact"}
+              to={quotePath(locale)}
               className="inline-flex items-center justify-center text-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-display font-bold text-base tracking-tight hover:shadow-[var(--shadow-gold)] transition-all duration-300 hover:scale-105"
             >
               <span>{data.btn}</span>

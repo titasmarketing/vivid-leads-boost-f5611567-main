@@ -53,8 +53,8 @@ export const nl = {
     title2: "Een Compleet Ander Leven.",
     desc1: "Dit project laat zien wat een volledige renovatie echt betekent: nieuwe kozijnen, vloerafwerking en schilderwerk, allemaal met precisie uitgevoerd, van begin tot eind. Het resultaat spreekt voor zich.",
     desc2: "Bij SP Schilders zijn onze renovatie- en schilderdiensten ontprevent om meer te doen dan alleen een oppervlak opfrissen. Ze transformeren de manier waarop een ruimte aanvoelt en waarde behoudt, waarbij elk detail wordt afgehandeld, van een enkele kamer tot een heel pand.",
-    desc3: "Klaar om te zien wat de uwe kan worden?",
-    btn: "Neem Contact Op"
+    desc3: "Klaar om te zien wat de jouwe kan worden?",
+    btn: "Gratis offerte aanvragen"
   },
   founder: {
     subtitle: "Ons Verhaal",
@@ -191,6 +191,188 @@ export const nl = {
       btnWhatsApp: "Offerte via WhatsApp",
       btnInstagram: "Inspiratie op Instagram",
       btnEmail: "Mail uw Vraag",
+    }
+  },
+  nav: {
+    trust1: "200+ projecten in Amsterdam",
+    trust2: "4 jaar garantie",
+    cta: "Gratis offerte aanvragen",
+    ctaShort: "Offerte",
+    links: { home: "Home", services: "Diensten", projects: "Projecten", about: "Over ons", contact: "Contact" },
+    phone: "Bel direct"
+  },
+  home: {
+    hero: {
+      kicker: "Gratis & vrijblijvende offerte binnen 24 uur",
+      title1: "Ontvang een",
+      titleHighlight: "GRATIS offerte",
+      title2: "en bespaar tot wel 30% op jouw schilderklus!",
+      bullets: [
+        "Maximaal 1 minuut van jouw tijd",
+        "Gratis & vrijblijvende offerte binnen 24 uur",
+        "Bespaar tot wel 30% op je project"
+      ],
+      cta: "Start hier jouw aanvraag!",
+      note: "Geen verplichtingen. Geen verrassingen achteraf.",
+      tags: ["4 jaar garantie", "200+ projecten", "Sikkens premium verf"]
+    },
+    reviews: {
+      title: "Onze klanten waarderen ons met:",
+      sub: "Gebaseerd op echte Google reviews van klanten uit Amsterdam en omstreken",
+      basedOn: "op basis van {count} Google reviews",
+      writeReview: "Schrijf een review",
+      goToReview: "Ga naar review"
+    },
+    why: {
+      title1: "Waarom",
+      title2: "SP Schilders?",
+      items: [
+        { title: "Bespaar geld", desc: "Eerlijke vaste prijs, tot 30% voordeliger" },
+        { title: "Bespaar tijd", desc: "Aanvragen duurt slechts 1 minuut" },
+        { title: "Zekerheid", desc: "4 jaar garantie op al ons werk" }
+      ],
+      vakTitle1: "Een echte",
+      vakTitle2: "vakschilder nodig?",
+      vakP1: "Ben je op zoek naar een betrouwbare en snelle schilder die jouw huis kan voorzien van hoogwaardig schilderwerk tegen een eerlijke prijs? Dan is SP Schilders de juiste vakman voor jou.",
+      vakP2: "Vraag in 1 minuut een gratis offerte aan. Wij komen langs, bekijken de klus en sturen binnen 24 uur een duidelijke, vrijblijvende offerte. Zo weet je precies waar je aan toe bent.",
+      vakP3: "Met meer dan 10 jaar ervaring in Amsterdam neem je een weloverwogen beslissing op basis van prijs én gevoel.",
+      btn: "Start hier jouw aanvraag!"
+    },
+    projects: {
+      subtitle: "Recent werk",
+      title1: "Onze projecten",
+      title2: "in Amsterdam",
+      desc: "Echte klussen, echte resultaten. Klik op een foto om te vergroten."
+    },
+    band: {
+      title: "Waarom kiezen voor SP Schilders?",
+      sub: "Als je via SP Schilders een offerte aanvraagt, dan:",
+      bullets: [
+        "Kost het je maximaal 1 minuut van je tijd",
+        "Ontvang je binnen 24 uur een GRATIS offerte",
+        "Bespaar je tot wel 30% op je project"
+      ],
+      cta: "Start direct & ontvang je offerte!"
+    },
+    info: {
+      readMore: "Lees verder",
+      readLess: "Lees minder",
+      cost: {
+        title1: "Wat",
+        titleHl: "kost",
+        title2: "een vakschilder?",
+        intro: "Het is belangrijk om het schilderwerk van je huis regelmatig bij te houden. Dit voorkomt schade aan het houtwerk of de gevel door weersomstandigheden. Over het algemeen wordt aanbevolen om het buitenschilderwerk elke 5 tot 10 jaar te laten uitvoeren. Dit kan ook een positief effect hebben op de waarde van je woning.",
+        more: "De prijs hangt af van het aantal vierkante meters, de staat van de ondergrond, het soort verf en de bereikbaarheid. Bij SP Schilders werken we met vaste prijzen en Sikkens premium verf, zodat je vooraf precies weet wat je betaalt. Vraag een gratis offerte aan en ontvang binnen 24 uur een duidelijke prijsopgave."
+      },
+      what: {
+        title1: "Wat",
+        titleHl: "doet",
+        title2: "SP Schilders?",
+        intro: "Onze schilders in Amsterdam en omstreken zijn gespecialiseerd in het schilderen van huizen, bedrijfspanden en andere vastgoedobjecten. Wij bieden een breed scala aan diensten, waaronder binnen- en buitenschilderwerk, spuitwerk, houtrotreparatie en onderhoud.",
+        more: "Elk project begint met grondig voorbereidend werk: schuren, plamuren en afplakken. Daarna schilderen we strak en netjes af en laten we je huis elke dag schoon achter. Op al ons werk geven we 4 jaar garantie."
+      }
+    },
+    stats: {
+      title1: "Waarom",
+      title2: "ons?",
+      items: [
+        { title: "Binnen 1 minuut", sub: "volledig ontzorgd" },
+        { title: "200+ tevreden", sub: "klanten in Amsterdam" },
+        { title: "Meer dan 10 jaar", sub: "ervaring" },
+        { title: "4 jaar garantie", sub: "op al ons werk" }
+      ],
+      cta: "Vraag je gratis offerte aan"
+    }
+  },
+  footerExtra: {
+    about: "Dien een aanvraag in voor een gratis offerte. Wij reageren binnen 24 uur met een duidelijke prijsopgave op maat.",
+    hours: "Openingstijden",
+    hoursValue: "Maandag – Zaterdag",
+    hoursTime: "08:00 – 18:00 uur",
+    contact: "Contact",
+    quoteLink: "Gratis offerte aanvragen",
+    privacy: "Privacybeleid"
+  },
+  quote: {
+    pageTitle: "Gratis offerte aanvragen",
+    pageSub: "Beantwoord een paar korte vragen (1 minuut) en ontvang binnen 24 uur een vrijblijvende offerte.",
+    stepOf: "Stap {n} van {total}",
+    back: "Vorige",
+    next: "Volgende",
+    submit: "Verstuur aanvraag",
+    sending: "Versturen...",
+    required: "Vul dit veld in om verder te gaan.",
+    phoneInvalid: "Vul een geldig Nederlands telefoonnummer in (bijv. +31 6 1234 5678).",
+    steps: {
+      work: {
+        q: "Wat wil je laten schilderen?",
+        options: [
+          { v: "Binnenschilderwerk", l: "Binnenschilderwerk", d: "Muren, plafonds, deuren, kozijnen" },
+          { v: "Buitenschilderwerk", l: "Buitenschilderwerk", d: "Gevel, kozijnen, houtwerk" },
+          { v: "Binnen & buiten", l: "Binnen & buiten", d: "Het complete pand" },
+          { v: "Spuitwerk", l: "Spuitwerk", d: "Strakke, fabrieksmatige afwerking" },
+          { v: "Anders", l: "Anders / weet ik nog niet", d: "We denken graag met je mee" }
+        ]
+      },
+      property: {
+        q: "Om wat voor pand gaat het?",
+        options: [
+          { v: "Appartement", l: "Appartement" },
+          { v: "Eengezinswoning", l: "Eengezinswoning" },
+          { v: "Bedrijfspand", l: "Bedrijfspand" },
+          { v: "VvE / meerdere woningen", l: "VvE / meerdere woningen" },
+          { v: "Anders", l: "Anders" }
+        ]
+      },
+      scope: {
+        q: "Wat moet er precies geschilderd worden?",
+        hint: "Meerdere antwoorden mogelijk",
+        options: [
+          { v: "Muren & plafonds", l: "Muren & plafonds" },
+          { v: "Kozijnen & deuren", l: "Kozijnen & deuren" },
+          { v: "Gevel", l: "Gevel" },
+          { v: "Houtwerk", l: "Houtwerk" },
+          { v: "Trap & leuningen", l: "Trap & leuningen" },
+          { v: "Anders", l: "Anders" }
+        ]
+      },
+      timing: {
+        q: "Wanneer wil je dat de klus start?",
+        options: [
+          { v: "Zo snel mogelijk", l: "Zo snel mogelijk" },
+          { v: "Binnen 1 maand", l: "Binnen 1 maand" },
+          { v: "Binnen 3 maanden", l: "Binnen 3 maanden" },
+          { v: "Nog aan het oriënteren", l: "Ik oriënteer me nog" }
+        ]
+      },
+      location: {
+        q: "Waar moet de klus worden uitgevoerd?",
+        postcode: "Postcode",
+        postcodePlace: "1068 WR",
+        city: "Plaats",
+        cityPlace: "Amsterdam"
+      },
+      contact: {
+        q: "Waar mogen we de offerte naartoe sturen?",
+        name: "Naam",
+        namePlace: "Jan van den Berg",
+        phone: "Telefoonnummer",
+        phonePlace: "+31 6 1234 5678",
+        email: "E-mailadres (optioneel)",
+        emailPlace: "jan@voorbeeld.nl",
+        message: "Opmerking (optioneel)",
+        messagePlace: "Bijv. aantal kamers, hoogte, bijzonderheden...",
+        privacy: "Je gegevens worden alleen gebruikt om contact met je op te nemen over je aanvraag."
+      }
+    },
+    thanks: {
+      title: "Bedankt voor je aanvraag, {name}!",
+      desc: "We hebben je gegevens ontvangen en nemen binnen 24 uur contact met je op voor een vrijblijvende offerte.",
+      waTitle: "Liever direct contact?",
+      waDesc: "Stuur ons een berichtje via WhatsApp, dan helpen we je meteen verder.",
+      waBtn: "Chat direct via WhatsApp",
+      home: "Terug naar de homepage",
+      waMessage: "Hallo SP Schilders! Ik heb zojuist een offerte aangevraagd via de website."
     }
   }
 };

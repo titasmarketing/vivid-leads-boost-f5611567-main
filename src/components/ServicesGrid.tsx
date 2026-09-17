@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/i18n";
 import { Link, useLocation } from "react-router-dom";
+import { quotePath } from "@/lib/links";
 
 import binnenImg from "@/assets/IMG_3625 (1).jpg";
 import buitenImg from "@/assets/a6e8b7d8-df94-4ccc-a852-9d87b71a83b6.jpg";
@@ -11,24 +12,24 @@ import cleaningImg from "@/assets/service-cleaning-v2.png";
 import maintenanceImg from "@/assets/service-maintenance-v2.png";
 
 const ease = [0.23, 1, 0.32, 1] as const;
-const WHATSAPP_URL = "https://tintim.link/whatsapp/27ec1702-33f6-457f-a432-2e2a2f8a6c1c/f07ca4cf-f49c-4dd7-9f01-2a0c6403c8b9";
 
 const ServicesGrid = () => {
   const { locale } = useTranslation();
   const location = useLocation();
   const isEn = locale === "en";
   const isBinnenschilderPage = location.pathname.includes("binnenschilder");
+  const quote = quotePath(locale);
 
   const bottomServices = [
     {
       title: isEn ? "Painting" : "Schilderwerk",
       image: paintingImg,
-      link: WHATSAPP_URL,
+      link: quote,
     },
     {
       title: isEn ? "Exterior Painting" : "Buitenschilderwerk",
       image: microcementImg,
-      link: WHATSAPP_URL,
+      link: quote,
     },
     {
       title: isEn ? "Interior Painting" : "Binnenschilderwerk",
@@ -38,7 +39,7 @@ const ServicesGrid = () => {
     {
       title: isEn ? "Spray Painting" : "Spuitwerk",
       image: maintenanceImg,
-      link: WHATSAPP_URL,
+      link: quote,
     },
   ];
 
@@ -88,7 +89,7 @@ const ServicesGrid = () => {
               <p className="font-body text-slate-600 text-base md:text-lg leading-relaxed">
                 {isEn
                   ? "Breathe new life into your interior spaces with our precision interior painting. Whether it is a single room or an entire building, we create an inviting atmosphere with clean lines and vibrant colors."
-                  : "Blaas uw binnenruimtes nieuw leven in met ons precisie binnenschilderwerk. Of het nu een enkele kamer of een heel pand is, wij creëren een uitnodigende sfeer met strakke lijnen en levendige kleuren."}
+                  : "Blaas je binnenruimtes nieuw leven in met ons precisie binnenschilderwerk. Of het nu een enkele kamer of een heel pand is, wij creëren een uitnodigende sfeer met strakke lijnen en levendige kleuren."}
               </p>
               <div className="pt-2">
                 <Link
@@ -152,18 +153,16 @@ const ServicesGrid = () => {
               <p className="font-body text-slate-600 text-base md:text-lg leading-relaxed">
                 {isEn
                   ? "Protect and beautify the exterior of your property with our expert painting services. From facades to window frames, our durable finishes withstand the unpredictable weather in Amsterdam."
-                  : "Bescherm en verfraai de buitenkant van uw pand met onze deskundige schilderdiensten. Van gevels tot kozijnen, onze duurzame afwerkingen zijn bestand tegen het wisselvallige weer in Amsterdam."}
+                  : "Bescherm en verfraai de buitenkant van je pand met onze deskundige schilderdiensten. Van gevels tot kozijnen, onze duurzame afwerkingen zijn bestand tegen het wisselvallige weer in Amsterdam."}
               </p>
               <div className="pt-2">
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to={quote}
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-xl font-display font-bold text-sm tracking-tight transition-transform duration-300 hover:scale-105 shadow-md shadow-primary/20"
                 >
-                  <span>{isEn ? "View service" : "Bekijk dienst"}</span>
+                  <span>{isEn ? "Request a quote" : "Offerte aanvragen"}</span>
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -175,7 +174,7 @@ const ServicesGrid = () => {
           {bottomServices.map((service, i) => {
             const CardButton = (
               <span className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground py-3 px-4 rounded-xl font-display font-bold text-sm tracking-tight transition-all duration-300 group-hover:scale-105 shadow-md">
-                {isEn ? "Bekijk dienst" : "Bekijk dienst"}
+                {isEn ? "View service" : "Bekijk dienst"}
               </span>
             );
 

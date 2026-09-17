@@ -1,39 +1,18 @@
-import { useState, useEffect, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Star, Send, MessageCircle } from "lucide-react";
+import { Send, MessageCircle } from "lucide-react";
 import { useTranslation } from "@/i18n";
+import ReviewCard, { GoogleG, Stars } from "@/components/ReviewCard";
+import { GOOGLE_RATING, GOOGLE_REVIEWS, GOOGLE_WRITE_REVIEW_URL } from "@/data/reviews";
 
 const WEBHOOK_URL = "https://hook.eu1.make.com/oafy4ddxvh1kjshlv2h1ok5rzw9widm9";
 const ease = [0.23, 1, 0.32, 1] as const;
 
-interface TestimonialsProps {
-  content?: any;
-}
-
-const Testimonials = ({ content }: TestimonialsProps = {}) => {
+const Testimonials = () => {
   const { t, locale } = useTranslation();
   const formText = t.contact.form;
   const [submitted, setSubmitted] = useState(false);
   const [phone, setPhone] = useState("");
-
-  useEffect(() => {
-    const scriptSrc = "https://cdn.featurable.com/widget/v2/embed.js";
-    const existingScript = document.querySelector(`script[src="${scriptSrc}"]`);
-
-    if (!existingScript) {
-      const script = document.createElement("script");
-      script.src = scriptSrc;
-      script.defer = true;
-      script.setAttribute("charset", "UTF-8");
-      document.body.appendChild(script);
-    } else {
-      const script = document.createElement("script");
-      script.src = `${scriptSrc}?v=${Date.now()}`;
-      script.defer = true;
-      script.setAttribute("charset", "UTF-8");
-      document.body.appendChild(script);
-    }
-  }, []);
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let input = e.target.value;
@@ -123,7 +102,7 @@ const Testimonials = ({ content }: TestimonialsProps = {}) => {
       <div className="container max-w-[1750px] mx-auto px-4 md:px-8">
         <div className="flex flex-col-reverse lg:flex-row gap-8 md:gap-10 items-start">
 
-          {/* Left Column: Featurable Google Reviews Widget (65% Width on Desktop, Second on Mobile) */}
+          {/* Left Column: Google reviews (65% width on desktop, second on mobile) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -133,22 +112,38 @@ const Testimonials = ({ content }: TestimonialsProps = {}) => {
           >
             {/* Header */}
             <div className="text-center mb-6 md:mb-8">
-              <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-slate-800 tracking-tight mb-2">
-                Onze klanten waarderen ons met:
-              </h3>
-              <div className="flex justify-center items-center gap-1.5 text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-7 h-7 md:w-8 md:h-8 fill-amber-400 text-amber-400" />
-                ))}
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <GoogleG className="w-7 h-7" />
+                <h3 className="font-display font-bold text-2xl md:text-3xl text-slate-800 tracking-tight">
+                  {t.home.reviews.title}
+                </h3>
+              </div>
+              <div className="flex justify-center items-center gap-2">
+                <Stars size="lg" />
+                <span className="font-display font-extrabold text-lg text-slate-900">
+                  {GOOGLE_RATING.toFixed(1).replace(".", locale === "nl" ? "," : ".")}
+                </span>
+                <span className="font-body text-sm text-slate-500">
+                  {t.home.reviews.basedOn.replace("{count}", String(GOOGLE_REVIEWS.length))}
+                </span>
               </div>
             </div>
 
-            {/* Featurable Google Reviews Widget Container */}
-            <div
-              id="featurable-21cdbb73-f908-4fab-8f97-77a4dddbe5a1"
-              data-featurable-async
-              className="w-full min-h-[300px]"
-            />
+            {/* Real Google reviews */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {GOOGLE_REVIEWS.map((review) => (
+                <ReviewCard key={review.id} review={review} locale={locale} clamp={6} />
+              ))}
+            </div>
+
+            <a
+              href={GOOGLE_WRITE_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 self-center font-display font-semibold text-xs text-slate-500 hover:text-slate-900 underline underline-offset-4 transition-colors"
+            >
+              {t.home.reviews.writeReview}
+            </a>
           </motion.div>
 
           {/* Right Column: Contact Form (35% Width) */}

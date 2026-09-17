@@ -1,58 +1,89 @@
-import { MapPin } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/sp-schilders-logo.png";
 import { useTranslation } from "@/i18n";
+import { ADDRESS_LINE1, ADDRESS_LINE2, EMAIL, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, localePath, quotePath } from "@/lib/links";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+  const f = t.footerExtra;
+
+  const links = [
+    { label: t.nav.links.home, to: localePath(locale, "/") },
+    { label: t.services.items.interior.title, to: localePath(locale, "/binnenschilder") },
+    { label: t.nav.links.contact, to: localePath(locale, "/contact") },
+    { label: f.quoteLink, to: quotePath(locale) },
+  ];
 
   return (
-    <footer className="bg-background relative overflow-hidden border-t border-white/[0.03]">
-      {/* Subtle top glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-[100px] bg-[radial-gradient(ellipse_at_top,rgba(234,179,8,0.05),transparent_70%)] pointer-events-none" />
+    <footer className="bg-background relative overflow-hidden border-t border-white/[0.05]">
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 
-      <div className="container py-14 md:py-20 relative z-10">
-        <div className="flex flex-col items-center text-center gap-6">
-          {/* Logo — prominent with subtle shadow */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <img
-              src={logo}
-              alt="SP Schilders"
-              className="relative h-20 md:h-28 w-auto mb-2 drop-shadow-lg"
-            />
-          </div>
+      <div className="container py-14 md:py-20 relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div>
+          <img src={logo} alt="SP Schilders" className="h-16 md:h-20 w-auto mb-4 drop-shadow-lg" />
+          <p className="font-display font-bold text-base tracking-tight text-foreground uppercase">SP Schilders</p>
+          <p className="font-body text-foreground/50 text-sm italic mb-4">{t.footer.tagline}</p>
+          <p className="font-body text-foreground/60 text-sm leading-relaxed max-w-xs">{f.about}</p>
+        </div>
 
-          {/* Company name + tagline */}
-          <div>
-            <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight text-foreground uppercase">
-              SP Schilders
-            </h3>
-            <p className="font-body text-foreground/50 text-sm md:text-base italic mt-1">
-              {t.footer.tagline}
-            </p>
+        <div>
+          <h3 className="font-display font-bold text-sm uppercase tracking-widest text-primary mb-4">{f.hours}</h3>
+          <div className="flex items-start gap-3 text-foreground/70 font-body text-sm">
+            <Clock className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+            <div>
+              <p>{f.hoursValue}</p>
+              <p>{f.hoursTime}</p>
+            </div>
           </div>
+        </div>
 
-          {/* Location */}
-          <div className="flex items-center gap-2 text-primary mt-2">
-            <MapPin className="w-5 h-5 shrink-0" />
-            <span className="font-body text-sm text-foreground/70">{t.footer.location}</span>
-          </div>
+        <div>
+          <h3 className="font-display font-bold text-sm uppercase tracking-widest text-primary mb-4">{f.contact}</h3>
+          <ul className="space-y-3 font-body text-sm text-foreground/70">
+            <li>
+              <a href={PHONE_TEL} className="flex items-center gap-3 hover:text-primary transition-colors">
+                <Phone className="w-4 h-4 text-primary shrink-0" />{PHONE_DISPLAY}
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 hover:text-primary transition-colors">
+                <Mail className="w-4 h-4 text-primary shrink-0" />{EMAIL}
+              </a>
+            </li>
+            <li className="flex items-start gap-3">
+              <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span>{ADDRESS_LINE1}<br />{ADDRESS_LINE2}</span>
+            </li>
+            <li>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-1 px-4 py-2 rounded-full bg-[#25D366] text-white font-display font-bold text-xs hover:bg-[#20ba5a] transition-colors"
+              >
+                WhatsApp &rarr;
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-display font-bold text-sm uppercase tracking-widest text-primary mb-4">Menu</h3>
+          <ul className="space-y-2.5 font-body text-sm text-foreground/70">
+            {links.map((l) => (
+              <li key={l.label}>
+                <Link to={l.to} className="hover:text-primary transition-colors">{l.label}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-white/[0.03] relative z-10 bg-black/20">
-        <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-body text-foreground/40 text-xs">
-            {t.footer.rights}
-          </p>
-          <div className="flex items-center gap-6">
-            <p className="font-body text-foreground/40 text-xs">
-              {t.footer.kvk}
-            </p>
-
-          </div>
+      <div className="border-t border-white/[0.05] relative z-10 bg-black/20">
+        <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="font-body text-foreground/40 text-xs">{t.footer.rights}</p>
+          <p className="font-body text-foreground/40 text-xs">{t.footer.kvk}</p>
         </div>
       </div>
     </footer>

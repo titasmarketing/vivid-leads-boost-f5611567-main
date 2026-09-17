@@ -54,7 +54,7 @@ export const en = {
     desc1: "This project shows what a full renovation really means: new window frames, floor finishing, and paintwork, all executed with precision, from start to finish. The result speaks for itself.",
     desc2: "At SP Schilders, our renovation and painting services are built to do more than refresh a surface. They transform the way a space feels and holds its value, every detail handled, from a single room to an entire property.",
     desc3: "Ready to see what yours could become?",
-    btn: "Get In Touch"
+    btn: "Request a free quote"
   },
   founder: {
     subtitle: "Our Story",
@@ -191,6 +191,188 @@ export const en = {
       btnWhatsApp: "Quote via WhatsApp",
       btnInstagram: "Inspiration on Instagram",
       btnEmail: "Email Your Question",
+    }
+  },
+  nav: {
+    trust1: "200+ projects in Amsterdam",
+    trust2: "4-year warranty",
+    cta: "Request a free quote",
+    ctaShort: "Quote",
+    links: { home: "Home", services: "Services", projects: "Projects", about: "About us", contact: "Contact" },
+    phone: "Call us"
+  },
+  home: {
+    hero: {
+      kicker: "Free, no-obligation quote within 24 hours",
+      title1: "Get a",
+      titleHighlight: "FREE quote",
+      title2: "and save up to 30% on your painting job!",
+      bullets: [
+        "Takes no more than 1 minute of your time",
+        "Free, no-obligation quote within 24 hours",
+        "Save up to 30% on your project"
+      ],
+      cta: "Start your request here!",
+      note: "No obligations. No surprises afterwards.",
+      tags: ["4-year warranty", "200+ projects", "Sikkens premium paint"]
+    },
+    reviews: {
+      title: "Our customers rate us:",
+      sub: "Based on real Google reviews from customers in Amsterdam and surroundings",
+      basedOn: "based on {count} Google reviews",
+      writeReview: "Write a review",
+      goToReview: "Go to review"
+    },
+    why: {
+      title1: "Why",
+      title2: "SP Schilders?",
+      items: [
+        { title: "Save money", desc: "Honest fixed price, up to 30% cheaper" },
+        { title: "Save time", desc: "Requesting a quote takes just 1 minute" },
+        { title: "Peace of mind", desc: "4-year warranty on all our work" }
+      ],
+      vakTitle1: "Need a real",
+      vakTitle2: "professional painter?",
+      vakP1: "Looking for a reliable, fast painter who can give your home high-quality paintwork at an honest price? Then SP Schilders is the right craftsman for you.",
+      vakP2: "Request a free quote in 1 minute. We visit, assess the job and send a clear, no-obligation quote within 24 hours. So you know exactly where you stand.",
+      vakP3: "With more than 10 years of experience in Amsterdam, you make a well-considered decision based on price and trust.",
+      btn: "Start your request here!"
+    },
+    projects: {
+      subtitle: "Recent work",
+      title1: "Our projects",
+      title2: "in Amsterdam",
+      desc: "Real jobs, real results. Click a photo to enlarge."
+    },
+    band: {
+      title: "Why choose SP Schilders?",
+      sub: "When you request a quote from SP Schilders:",
+      bullets: [
+        "It takes no more than 1 minute of your time",
+        "You receive a FREE quote within 24 hours",
+        "You save up to 30% on your project"
+      ],
+      cta: "Start now & get your quote!"
+    },
+    info: {
+      readMore: "Read more",
+      readLess: "Read less",
+      cost: {
+        title1: "What does",
+        titleHl: "a painter",
+        title2: "cost?",
+        intro: "It is important to keep the paintwork of your home in good condition. This prevents damage to woodwork and facades caused by the weather. In general, exterior paintwork should be redone every 5 to 10 years. It can also have a positive effect on the value of your home.",
+        more: "The price depends on the number of square metres, the condition of the surface, the type of paint and accessibility. At SP Schilders we work with fixed prices and Sikkens premium paint, so you know exactly what you pay in advance. Request a free quote and receive a clear price within 24 hours."
+      },
+      what: {
+        title1: "What does",
+        titleHl: "SP Schilders",
+        title2: "do?",
+        intro: "Our painters in Amsterdam and surroundings specialise in painting houses, commercial buildings and other properties. We offer a wide range of services, including interior and exterior painting, spray painting, wood rot repair and maintenance.",
+        more: "Every project starts with thorough preparation: sanding, filling and masking. Then we paint cleanly and precisely, and leave your home tidy every day. All our work comes with a 4-year warranty."
+      }
+    },
+    stats: {
+      title1: "Why",
+      title2: "us?",
+      items: [
+        { title: "Within 1 minute", sub: "completely taken care of" },
+        { title: "200+ happy", sub: "customers in Amsterdam" },
+        { title: "More than 10 years", sub: "of experience" },
+        { title: "4-year warranty", sub: "on all our work" }
+      ],
+      cta: "Request your free quote"
+    }
+  },
+  footerExtra: {
+    about: "Submit a request for a free quote. We respond within 24 hours with a clear, tailored price.",
+    hours: "Opening hours",
+    hoursValue: "Monday – Saturday",
+    hoursTime: "08:00 – 18:00",
+    contact: "Contact",
+    quoteLink: "Request a free quote",
+    privacy: "Privacy policy"
+  },
+  quote: {
+    pageTitle: "Request a free quote",
+    pageSub: "Answer a few short questions (1 minute) and receive a no-obligation quote within 24 hours.",
+    stepOf: "Step {n} of {total}",
+    back: "Back",
+    next: "Next",
+    submit: "Send request",
+    sending: "Sending...",
+    required: "Please fill in this field to continue.",
+    phoneInvalid: "Please enter a valid Dutch phone number (e.g. +31 6 1234 5678).",
+    steps: {
+      work: {
+        q: "What would you like painted?",
+        options: [
+          { v: "Interior Painting", l: "Interior painting", d: "Walls, ceilings, doors, frames" },
+          { v: "Exterior Painting", l: "Exterior painting", d: "Facade, window frames, woodwork" },
+          { v: "Interior & Exterior", l: "Interior & exterior", d: "The whole property" },
+          { v: "Spray Painting", l: "Spray painting", d: "Smooth, factory-like finish" },
+          { v: "Other", l: "Other / not sure yet", d: "We are happy to advise you" }
+        ]
+      },
+      property: {
+        q: "What kind of property is it?",
+        options: [
+          { v: "Apartment", l: "Apartment" },
+          { v: "Family house", l: "Family house" },
+          { v: "Commercial building", l: "Commercial building" },
+          { v: "HOA / multiple homes", l: "HOA / multiple homes" },
+          { v: "Other", l: "Other" }
+        ]
+      },
+      scope: {
+        q: "What exactly needs painting?",
+        hint: "Multiple answers possible",
+        options: [
+          { v: "Walls & ceilings", l: "Walls & ceilings" },
+          { v: "Window frames & doors", l: "Window frames & doors" },
+          { v: "Facade", l: "Facade" },
+          { v: "Woodwork", l: "Woodwork" },
+          { v: "Stairs & railings", l: "Stairs & railings" },
+          { v: "Other", l: "Other" }
+        ]
+      },
+      timing: {
+        q: "When would you like the job to start?",
+        options: [
+          { v: "As soon as possible", l: "As soon as possible" },
+          { v: "Within 1 month", l: "Within 1 month" },
+          { v: "Within 3 months", l: "Within 3 months" },
+          { v: "Still orienting", l: "I'm still orienting" }
+        ]
+      },
+      location: {
+        q: "Where should the job be carried out?",
+        postcode: "Postcode",
+        postcodePlace: "1068 WR",
+        city: "City",
+        cityPlace: "Amsterdam"
+      },
+      contact: {
+        q: "Where can we send the quote?",
+        name: "Name",
+        namePlace: "John van der Berg",
+        phone: "Phone number",
+        phonePlace: "+31 6 1234 5678",
+        email: "Email address (optional)",
+        emailPlace: "john@example.com",
+        message: "Remarks (optional)",
+        messagePlace: "E.g. number of rooms, ceiling height, special details...",
+        privacy: "Your details are only used to contact you about your request."
+      }
+    },
+    thanks: {
+      title: "Thank you for your request, {name}!",
+      desc: "We have received your details and will contact you within 24 hours with a no-obligation quote.",
+      waTitle: "Prefer direct contact?",
+      waDesc: "Send us a message on WhatsApp and we'll help you right away.",
+      waBtn: "Chat directly on WhatsApp",
+      home: "Back to the homepage",
+      waMessage: "Hello SP Schilders! I just requested a quote through the website."
     }
   }
 };
