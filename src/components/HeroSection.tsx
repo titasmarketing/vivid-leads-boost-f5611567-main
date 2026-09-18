@@ -36,9 +36,11 @@ const HeroSection = () => {
             {h.kicker}
           </p>
 
-          <h1 className="font-display font-extrabold text-[2rem] sm:text-4xl md:text-[2.9rem] leading-[1.05] tracking-tighter text-zinc-900">
+          <h1 className="font-display font-extrabold text-[1.95rem] sm:text-4xl md:text-[2.85rem] leading-[1.18] sm:leading-[1.15] tracking-tight text-zinc-900">
             {h.title1}{" "}
-            <span className="bg-primary text-zinc-900 px-2 rounded-lg box-decoration-clone">{h.titleHighlight}</span>{" "}
+            <span className="relative inline-block whitespace-nowrap bg-primary text-zinc-900 px-2.5 py-0.5 rounded-lg font-extrabold shadow-sm my-0.5">
+              {h.titleHighlight}
+            </span>{" "}
             {h.title2}
           </h1>
 
